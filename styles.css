@@ -101,7 +101,7 @@ section {
 }
 
 /* Navbar Styles */
-/* Updated Navbar Styles */
+/* Navbar Styles */
 .navbar {
   width: 100%;
   padding: 20px 50px;
@@ -185,6 +185,7 @@ section {
   width: 100%;
 }
 
+/* Hamburger */
 .hamburger {
   display: none;
   cursor: pointer;
@@ -209,6 +210,31 @@ section {
 .hamburger .line:nth-child(2) {
   width: 70%;
 }
+
+/* Responsive Mobile Styles */
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+    position: absolute;
+    top: 70px;
+    right: 20px;
+    background-color: #1f2937;
+    padding: 12px 16px;
+    border-radius: 10px;
+    flex-direction: column;
+    gap: 15px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+}
+
 
 @media (max-width: 768px) {
   .nav-links {
