@@ -403,7 +403,7 @@ section {
   border-radius: 50%;
   border: 5px solid var(--primary-color);
   position: relative;
-  z-index: 2;
+  z-index: 1;
   transition: transform 0.3s ease;
 }
 
