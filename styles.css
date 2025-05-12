@@ -190,7 +190,7 @@ section {
   cursor: pointer;
   flex-direction: column;
   justify-content: space-between;
-  width: 10px;
+  width: 30px;
   height: 21px;
   transition: all 0.3s ease;
 }
@@ -249,6 +249,9 @@ section {
     justify-content: center;
     gap: 40px;
     transition: left 0.3s ease;
+    padding: 20px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
   }
 
   .nav-links.active {
@@ -271,6 +274,7 @@ section {
     transform: rotate(-45deg) translate(7px, -6px);
   }
 }
+
 
 /* Hero Section */
 .hero {
