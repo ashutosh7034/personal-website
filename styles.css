@@ -211,30 +211,6 @@ section {
 }
 
 /* Responsive Mobile Styles */
-@media (max-width: 768px) {
-  .nav-links {
-    display: none;
-    position: absolute;
-    top: 60px; /* below navbar */
-    right: 20px;
-    background-color: #1f2937; /* dark background (customize if needed) */
-    padding: 10px 15px;
-    border-radius: 8px;
-    flex-direction: column;
-    gap: 10px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-    z-index: 1000;
-  }
-
-  .nav-links.active {
-    display: flex;
-  }
-
-  .hamburger {
-    display: flex;
-  }
-}
-
 
 @media (max-width: 768px) {
   .nav-links {
