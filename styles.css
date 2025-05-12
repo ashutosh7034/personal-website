@@ -1691,8 +1691,8 @@ section {
   }
 
   .hero-image img {
-    width: 100%;
-    height: 100%;
+    width: 60%;
+    height: 40%;
     object-fit: cover;
     border-radius: 50%;
     border: 4px solid var(--primary-color);
