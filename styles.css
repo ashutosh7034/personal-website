@@ -1658,7 +1658,7 @@ section {
   .hero {
     display: flex;
     flex-direction: column;
-    padding: 120px 20px 60px;
+    padding: 100px 20px 40px;
     min-height: auto;
     background: linear-gradient(135deg, #0f172a, #1e293b);
     text-align: center;
@@ -1683,7 +1683,7 @@ section {
   .hero-image {
     order: -1;
     width: 100%;
-    margin-bottom: 40px;
+    margin-bottom: 20px;
     position: relative;
     z-index: 1;
     opacity: 1;
