@@ -1658,7 +1658,7 @@ section {
   .hero {
     display: flex;
     flex-direction: column;
-    padding: 100px 20px 40px;
+    padding: 120px 20px 60px;
     min-height: auto;
     background: linear-gradient(135deg, #0f172a, #1e293b);
     text-align: center;
