@@ -3,114 +3,104 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Ashutosh Pandey - Full Stack Developer</title>
-  <!-- Font Awesome -->
+  <title>Ashutosh Pandey - Portfolio</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
-  <!-- CSS -->
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&family=Red+Hat+Display:wght@500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <!-- Navbar -->
-<!-- Updated Navbar Section -->
-<nav class="navbar">
-  <div class="logo">AP</div>
-  <ul class="nav-links">
-    <li><a href="#about">About</a></li>
-    <li><a href="#skills">Skills</a></li>
-    <li><a href="#projects">Projects</a></li>
-    <li><a href="#achievements">Achievements</a></li>
-    <li><a href="#contact">Contact</a></li>
-  </ul>
-  <div class="hamburger">
-    <div class="line"></div>
-    <div class="line"></div>
-    <div class="line"></div>
+  <div class="loading-screen" id="loading-screen">
+    <div class="loader-3d">AP</div>
   </div>
-</nav>
 
-  <!-- Hero Section -->
+  <div class="cursor-dot" id="cursor-dot"></div>
+  <div class="cursor-follower" id="cursor-follower"></div>
+
+  <nav class="navbar">
+    <div class="logo">AP</div>
+    <ul class="nav-links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#education">Education</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#achievements">Achievements</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <div class="hamburger">
+      <div class="line"></div>
+      <div class="line"></div>
+      <div class="line"></div>
+    </div>
+  </nav>
+
   <section class="hero">
+    <div class="gradient-mesh"></div>
+    <div class="hero-3d-bg" id="hero-3d-bg" aria-hidden="true"></div>
     <div class="hero-text">
-      <h1>Hi, I'm <span class="highlight">Ashutosh Pandey</span></h1>
-      <h2 class="typing-text">Computer Science Student & Developer</h2>
-      <p>Passionate about building innovative solutions with Python, Flutter, and web technologies. Currently pursuing B.Sc. in Computer Science with a 9.1 CGPA.</p>
+      <h1>Hi, I am <span class="highlight">Ashutosh Pandey</span></h1>
+      <h2 class="typing-text">MCA Student | BS Data Science (IIT Madras) | Software Developer</h2>
+      <p>Motivated Computer Science graduate currently pursuing an MCA at TCET and a BS in Data Science & Applications from IIT Madras. Skilled in Python, Dart, C, Java, and modern web development. Passionate about AI, data-driven solutions, and building efficient, user-focused applications.</p>
       <div class="button-group">
         <a href="#projects" class="btn-primary">View My Projects <i class="fas fa-arrow-right"></i></a>
-        <a href="https://drive.google.com/file/d/1Bf58Hbn1WyLOiCqdY48PqMz8X6v8SJyy/view?usp=sharing" download="Ashutosh_Pandey_Resume.pdf" class="btn-secondary">Download My Resume <i class="fas fa-file-download"></i></a>
-    </div>
+        <a href="https://drive.google.com/file/d/15dGwotl6rgJd5ncRdB7bfrMI7XXMAvWK/view?usp=sharing" class="btn-secondary" target="_blank" rel="noopener noreferrer">Download My Resume <i class="fas fa-file-download"></i></a>
+      </div>
       <div class="social-icons">
-        <a href="https://github.com/ashutosh7034" aria-label="GitHub" target="_blank"><i class="fab fa-github"></i></a>
-        <a href="https://www.linkedin.com/in/ashutoshpandey34/" aria-label="LinkedIn" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+        <a href="https://github.com/ashutosh7034" aria-label="GitHub" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i></a>
+        <a href="https://www.linkedin.com/in/ashutoshpandey34/" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin-in"></i></a>
         <a href="mailto:ashutosh3276s16@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
         <a href="tel:+919702420582" aria-label="Phone"><i class="fas fa-phone"></i></a>
       </div>
     </div>
-        <div class="hero-image">
-          <div class="profile-container">
-            <div class="profile-border">
-              <img src="images/photo.jpg" alt="Ashutosh Pandey">
-            </div>
-          <div class="profile-dots">
-            <span class="dot dot-1"></span>
-            <span class="dot dot-2"></span>
-            <span class="dot dot-3"></span>
-            <span class="dot dot-4"></span>
-          </div>
-        </div>
+    <div class="hero-image">
+      <div class="profile-container">
+        <img src="images/Ashutosh Pandey_ generated image.png" alt="Ashutosh Pandey">
       </div>
-    </div>
-    <div class="curve-divider">
-      <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
-        <path d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z" opacity=".25" class="shape-fill"></path>
-        <path d="M0,0V15.81C13,36.92,27.64,56.86,47.69,72.05,99.41,111.27,165,111,224.58,91.58c31.15-10.15,60.09-26.07,89.67-39.8,40.92-19,84.73-46,130.83-49.67,36.26-2.85,70.9,9.42,98.6,31.56,31.77,25.39,62.32,62,103.63,73,40.44,10.79,81.35-6.69,119.13-24.28s75.16-39,116.92-43.05c59.73-5.85,113.28,22.88,168.9,38.84,30.2,8.66,59,6.17,87.09-7.5,22.43-10.89,48-26.93,60.65-49.24V0Z" opacity=".5" class="shape-fill"></path>
-        <path d="M0,0V5.63C149.93,59,314.09,71.32,475.83,42.57c43-7.64,84.23-20.12,127.61-26.46,59-8.63,112.48,12.24,165.56,35.4C827.93,77.22,886,95.24,951.2,90c86.53-7,172.46-45.71,248.8-84.81V0Z" class="shape-fill"></path>
-      </svg>
+      <div class="geo-shape" id="geo-shape"></div>
     </div>
   </section>
 
-  <!-- About Section -->
   <section class="about-section" id="about">
     <div class="container">
       <h2><span class="section-title">About Me</span></h2>
       <div class="about-container">
         <div class="about-left">
           <h3>Who I Am</h3>
-          <p>A passionate Computer Science student at Thakur Ramnarayan College with strong programming skills in Python, Dart, Java, and web technologies. I thrive in collaborative environments and have taken leadership roles in organizing college tech fests while maintaining excellent academic performance.</p>
-          
+          <p>Motivated Computer Science graduate currently pursuing an MCA at TCET and a BS in Data Science & Applications from IIT Madras. Skilled in Python, Dart, C, Java, and modern web development. Passionate about AI, data-driven solutions, and building efficient, user-focused applications.</p>
           <div class="stats">
-            <div class="stat-box">
-              <h4>9.1</h4>
-              <p>Current CGPA</p>
+            <div class="stat-box floating-card">
+              <h4>3+ Years</h4>
+              <p>Learning</p>
             </div>
-            <div class="stat-box">
-              <h4>5+</h4>
-              <p>Projects</p>
+            <div class="stat-box floating-card">
+              <h4>4+ Projects</h4>
+              <p>Built</p>
             </div>
-            <div class="stat-box">
-              <h4>2</h4>
-              <p>Tech Fests Organized</p>
+            <div class="stat-box floating-card">
+              <h4>2 Degrees</h4>
+              <p>Pursuing</p>
             </div>
-            <div class="stat-box">
-              <h4>6</h4>
-              <p>Certifications</p>
+            <div class="stat-box floating-card">
+              <h4>6+ Certifications</h4>
+              <p>Completed</p>
             </div>
           </div>
         </div>
 
         <div class="about-right">
-          <div class="experience-card">
+          <div class="experience-card timeline-card">
             <div class="timeline-dot"></div>
-            <h5>2023 - 2025</h5>
-            <h4>Event Head</h4>
-            <p>NanoByte & ZettaaByte Tech Fests</p>
-            <ul>
-              <li>Organized intra and inter-college technical events</li>
-              <li>Managed teams and event logistics</li>
-            </ul>
+            <h5>Dec 2024 - Jul 2025 | Remote</h5>
+            <h4>Software Developer at Creatalysis</h4>
+            <p>Worked closely with the team to build and enhance software features while improving problem-solving, coding, and collaboration skills.</p>
           </div>
-          <div class="experience-card">
+          <div class="experience-card timeline-card">
+            <div class="timeline-dot"></div>
+            <h5>Sep 2025 - Present</h5>
+            <h4>MCA at TCET + BS DS&A at IIT Madras</h4>
+            <p>Pursuing dual postgraduate pathways with focus on software engineering, AI, and data-driven systems.</p>
+          </div>
+          <div class="experience-card timeline-card">
             <div class="timeline-dot"></div>
             <h5>2022 - 2025</h5>
             <h4>Placement Volunteer</h4>
@@ -120,150 +110,155 @@
               <li>Coordinated between students and companies</li>
             </ul>
           </div>
-          <div class="experience-card">
-            <div class="timeline-dot"></div>
-            <h5>2022 - 2025</h5>
-            <h4>Academic Achievements</h4>
-            <p>University of Mumbai</p>
-            <ul>
-              <li>Consistent 9+ SGPA in Computer Science</li>
-              <li>Specialized in AI and Database systems</li>
-            </ul>
-          </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Skills Section -->
+  <section class="experience-section" id="experience">
+    <div class="container">
+      <h2><span class="section-title">Professional Experience</span></h2>
+      <div class="single-exp-card timeline-card">
+        <h3>Software Developer - Creatalysis</h3>
+        <h4>December 2024 - July 2025 | Remote</h4>
+        <p>Worked closely with the team to build and enhance software features while improving problem-solving, coding, and collaboration skills.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="education-section" id="education">
+    <div class="container">
+      <h2><span class="section-title">Education</span></h2>
+      <div class="education-grid">
+        <div class="edu-card timeline-card">
+          <h3>Thakur College of Engineering and Technology (TCET)</h3>
+          <p>Master of Computer Applications (MCA)</p>
+          <span>09/2025 - Present | Mumbai</span>
+        </div>
+        <div class="edu-card timeline-card">
+          <h3>Indian Institute of Technology, Madras (IITM)</h3>
+          <p>BS in Data Science & Applications</p>
+          <span>09/2025 - Present | Remote</span>
+        </div>
+        <div class="edu-card timeline-card">
+          <h3>Thakur Ramnarayan College of Arts & Commerce</h3>
+          <p>B.Sc. in Computer Science</p>
+          <span>07/2022 - 05/2025 | Mumbai</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <section class="skills-section" id="skills">
     <div class="container">
       <h2><span class="section-title">Technical Skills</span></h2>
-      <div class="skills-container">
-        <div class="skills-category">
-          <h3><i class="fas fa-code"></i> Programming</h3>
-          <div class="skill-item">
-            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python">
-            <div class="skill-info">
-              <span>Python</span>
-              <div class="skill-bar">
-                <div class="skill-level" style="width: 90%"></div>
-              </div>
-            </div>
-          </div>
-          <div class="skill-item">
-            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/dart/dart-original.svg" alt="Dart">
-            <div class="skill-info">
-              <span>Dart (Flutter)</span>
-              <div class="skill-bar">
-                <div class="skill-level" style="width: 85%"></div>
-              </div>
-            </div>
-          </div>
-          <div class="skill-item">
-            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" alt="Java">
-            <div class="skill-info">
-              <span>Java</span>
-              <div class="skill-bar">
-                <div class="skill-level" style="width: 80%"></div>
-              </div>
-            </div>
+      <div class="skills-orb-grid">
+        <div class="skill-orb">
+          <div class="orb-inner">
+            <div class="orb-front"><i class="fab fa-python"></i><span>Python</span></div>
+            <div class="orb-back"><span>Advanced</span></div>
           </div>
         </div>
-
-        <div class="skills-category">
-          <h3><i class="fas fa-globe"></i> Web Development</h3>
-          <div class="skill-item">
-            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML">
-            <div class="skill-info">
-              <span>HTML5</span>
-              <div class="skill-bar">
-                <div class="skill-level" style="width: 95%"></div>
-              </div>
-            </div>
-          </div>
-          <div class="skill-item">
-            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS">
-            <div class="skill-info">
-              <span>CSS3</span>
-              <div class="skill-bar">
-                <div class="skill-level" style="width: 90%"></div>
-              </div>
-            </div>
-          </div>
-          <div class="skill-item">
-            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript">
-            <div class="skill-info">
-              <span>JavaScript</span>
-              <div class="skill-bar">
-                <div class="skill-level" style="width: 85%"></div>
-              </div>
-            </div>
-          </div>
-          <div class="skill-item">
-            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" alt="Node.js">
-            <div class="skill-info">
-              <span>Node.js</span>
-              <div class="skill-bar">
-                <div class="skill-level" style="width: 75%"></div>
-              </div>
-            </div>
+        <div class="skill-orb">
+          <div class="orb-inner">
+            <div class="orb-front"><i class="fas fa-mobile-alt"></i><span>Dart / Flutter</span></div>
+            <div class="orb-back"><span>Advanced</span></div>
           </div>
         </div>
-
-        <div class="skills-category">
-          <h3><i class="fas fa-database"></i> Other Skills</h3>
-          <div class="skill-item">
-            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" alt="MySQL">
-            <div class="skill-info">
-              <span>MySQL</span>
-              <div class="skill-bar">
-                <div class="skill-level" style="width: 85%"></div>
-              </div>
-            </div>
+        <div class="skill-orb">
+          <div class="orb-inner">
+            <div class="orb-front"><i class="fab fa-java"></i><span>Java</span></div>
+            <div class="orb-back"><span>Intermediate</span></div>
           </div>
-          <div class="skill-item">
-            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg" alt="MongoDB">
-            <div class="skill-info">
-              <span>MongoDB</span>
-              <div class="skill-bar">
-                <div class="skill-level" style="width: 80%"></div>
-              </div>
-            </div>
+        </div>
+        <div class="skill-orb">
+          <div class="orb-inner">
+            <div class="orb-front"><i class="fas fa-code"></i><span>C</span></div>
+            <div class="orb-back"><span>Intermediate</span></div>
           </div>
-          <div class="skill-item">
-            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" alt="Git">
-            <div class="skill-info">
-              <span>Git</span>
-              <div class="skill-bar">
-                <div class="skill-level" style="width: 90%"></div>
-              </div>
-            </div>
+        </div>
+        <div class="skill-orb">
+          <div class="orb-inner">
+            <div class="orb-front"><i class="fab fa-html5"></i><span>HTML/CSS/JS</span></div>
+            <div class="orb-back"><span>Advanced</span></div>
           </div>
-          <div class="skill-item">
-            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg" alt="Figma">
-            <div class="skill-info">
-              <span>UI/UX (Figma)</span>
-              <div class="skill-bar">
-                <div class="skill-level" style="width: 70%"></div>
-              </div>
-            </div>
+        </div>
+        <div class="skill-orb">
+          <div class="orb-inner">
+            <div class="orb-front"><i class="fab fa-node-js"></i><span>Node.js</span></div>
+            <div class="orb-back"><span>Intermediate</span></div>
+          </div>
+        </div>
+        <div class="skill-orb">
+          <div class="orb-inner">
+            <div class="orb-front"><i class="fas fa-database"></i><span>MySQL / MongoDB</span></div>
+            <div class="orb-back"><span>Intermediate</span></div>
+          </div>
+        </div>
+        <div class="skill-orb">
+          <div class="orb-inner">
+            <div class="orb-front"><i class="fas fa-tools"></i><span>Git, Figma, Android Studio</span></div>
+            <div class="orb-back"><span>Intermediate</span></div>
+          </div>
+        </div>
+        <div class="skill-orb">
+          <div class="orb-inner">
+            <div class="orb-front"><i class="fas fa-laptop"></i><span>Canva, Motiff, UiPath, Microsoft Tools</span></div>
+            <div class="orb-back"><span>Working Proficiency</span></div>
+          </div>
+        </div>
+        <div class="skill-orb">
+          <div class="orb-inner">
+            <div class="orb-front"><i class="fas fa-robot"></i><span>Prompt Engineering, AI Workflows</span></div>
+            <div class="orb-back"><span>Practical</span></div>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Projects Section -->
   <section class="projects-section" id="projects">
     <div class="container">
       <h2><span class="section-title">Projects</span></h2>
       <div class="projects-grid">
         <div class="project-card">
           <div class="project-image">
-            <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="QuizAI Application">
+            <img src="https://images.unsplash.com/photo-1488229297570-58520851e868?auto=format&fit=crop&w=1350&q=80" alt="College Academic Support">
+          </div>
+          <div class="project-content">
+            <div class="project-title">College Academic Support - RAG-based AI Assistant</div>
+            <div class="project-duration">January 2026 - March 2026</div>
+            <div class="project-description">Developed a Retrieval-Augmented Generation (RAG) based academic assistant that provides accurate answers to students' queries by retrieving relevant academic content from a knowledge base and generating contextual responses using a Large Language Model.</div>
+            <div class="project-tags">
+              <div class="tag">Python</div>
+              <div class="tag">RAG</div>
+              <div class="tag">LLM</div>
+              <div class="tag">AI</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <div class="project-image">
+            <img src="https://images.unsplash.com/photo-1556740758-90de374c12ad?auto=format&fit=crop&w=1350&q=80" alt="Local Service Search Engine">
+          </div>
+          <div class="project-content">
+            <div class="project-title">Local Service Search Engine</div>
+            <div class="project-duration">February 2025 - May 2025</div>
+            <div class="project-description">Designed and developed a platform that enables users to discover nearby services such as electricians, plumbers, mechanics, and tutors.</div>
+            <div class="project-tags">
+              <div class="tag">Full-Stack</div>
+              <div class="tag">JavaScript</div>
+              <div class="tag">Node.js</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <div class="project-image">
+            <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1350&q=80" alt="QuizAI Application">
             <div class="project-overlay">
-              <a href="https://github.com/ashutosh7034/QuizAI" class="project-link" target="_blank"><i class="fab fa-github"></i></a>
+              <a href="https://github.com/ashutosh7034/QuizAI" class="project-link" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i></a>
             </div>
           </div>
           <div class="project-content">
@@ -279,27 +274,9 @@
 
         <div class="project-card">
           <div class="project-image">
-            <img src="https://images.unsplash.com/photo-1522542550221-31fd19575a2d?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Curfew E-Pass System">
+            <img src="https://images.unsplash.com/photo-1589998059171-988d887df646?auto=format&fit=crop&w=1350&q=80" alt="Maharashtra Books Portal">
             <div class="project-overlay">
-              <a href="https://github.com/ashutosh7034/Curfew-E-pass-Management-System" class="project-link" target="_blank"><i class="fab fa-github"></i></a>
-            </div>
-          </div>
-          <div class="project-content">
-            <div class="project-title">Curfew E-Pass System</div>
-            <div class="project-description">Online system for curfew travel pass applications with real-time QR code verification for secure enforcement.</div>
-            <div class="project-tags">
-              <div class="tag">Full-Stack</div>
-              <div class="tag">Node.js</div>
-              <div class="tag">MongoDB</div>
-            </div>
-          </div>
-        </div>
-
-        <div class="project-card">
-          <div class="project-image">
-            <img src="https://images.unsplash.com/photo-1589998059171-988d887df646?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Maharashtra Books">
-            <div class="project-overlay">
-              <a href="https://maharashtrabookpdf.netlify.app" class="project-link" target="_blank"><i class="fas fa-external-link-alt"></i></a>
+              <a href="https://maharashtrabookpdf.netlify.app" class="project-link" target="_blank" rel="noopener noreferrer"><i class="fas fa-external-link-alt"></i></a>
             </div>
           </div>
           <div class="project-content">
@@ -312,21 +289,47 @@
             </div>
           </div>
         </div>
+      </div>
+    </div>
+  </section>
 
-        <div class="project-card">
-          <div class="project-image">
-            <img src="https://images.unsplash.com/photo-1551269901-5c5e14c25df7?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Web Calculator">
-            <div class="project-overlay">
-              <a href="https://htmlcalculatorap.netlify.app" class="project-link" target="_blank"><i class="fas fa-external-link-alt"></i></a>
+  <section class="achievements-section" id="achievements">
+    <div class="container">
+      <h2><span class="section-title">Certifications & Achievements</span></h2>
+      <div class="achievements-timeline">
+        <div class="achievement-item timeline-card">
+          <div class="achievement-content">
+            <div class="achievement-icon certs"><i class="fas fa-certificate"></i></div>
+            <div class="achievement-details">
+              <h3>AI Tools Proficiency</h3>
+              <p>FREEDOM WITH AI</p>
             </div>
           </div>
-          <div class="project-content">
-            <div class="project-title">Web Calculator</div>
-            <div class="project-description">Interactive calculator demonstrating front-end development skills and UI/UX design principles.</div>
-            <div class="project-tags">
-              <div class="tag">HTML</div>
-              <div class="tag">CSS</div>
-              <div class="tag">JavaScript</div>
+        </div>
+        <div class="achievement-item timeline-card">
+          <div class="achievement-content">
+            <div class="achievement-icon certs"><i class="fas fa-satellite"></i></div>
+            <div class="achievement-details">
+              <h3>Remote Sensing</h3>
+              <p>Indian Institute of Remote Sensing</p>
+            </div>
+          </div>
+        </div>
+        <div class="achievement-item timeline-card">
+          <div class="achievement-content">
+            <div class="achievement-icon certs"><i class="fas fa-brain"></i></div>
+            <div class="achievement-details">
+              <h3>Machine Learning with AI using Python</h3>
+              <p>Microsoft in Education Global Training Partner</p>
+            </div>
+          </div>
+        </div>
+        <div class="achievement-item timeline-card">
+          <div class="achievement-content">
+            <div class="achievement-icon certs"><i class="fas fa-award"></i></div>
+            <div class="achievement-details">
+              <h3>20th Aavishkar Research Convention - Final Round Selection Certificate</h3>
+              <p>University of Mumbai</p>
             </div>
           </div>
         </div>
@@ -334,124 +337,19 @@
     </div>
   </section>
 
-<!-- Achievements Section -->
-<section class="achievements-section" id="achievements">
-  <div class="container">
-    <h2><span class="section-title">My Achievements</span></h2>
-    
-    <div class="achievements-timeline">
-      <!-- Academic Achievement -->
-      <div class="achievement-item">
-        <div class="achievement-date">2022-2025</div>
-        <div class="achievement-content">
-          <div class="achievement-icon academic">
-            <i class="fas fa-graduation-cap"></i>
-          </div>
-          <div class="achievement-details">
-            <h3>Academic Excellence</h3>
-            <p>Consistent 9+ SGPA in B.Sc. Computer Science</p>
-            <ul class="achievement-stats">
-              <li><span class="stat-value">9.6</span> Highest SGPA</li>
-              <li><span class="stat-value">9.1</span> Current CGPA</li>
-              <li><span class="stat-value">Top 5%</span> of Class</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-      
-      <!-- Technical Achievements -->
-      <div class="achievement-item">
-        <div class="achievement-date">2023</div>
-        <div class="achievement-content">
-          <div class="achievement-icon tech">
-            <i class="fas fa-laptop-code"></i>
-          </div>
-          <div class="achievement-details">
-            <h3>Technical Projects</h3>
-            <p>Developed multiple full-stack applications</p>
-            <div class="project-highlights">
-              <div class="project-badge">
-                <span class="badge-icon"><i class="fas fa-robot"></i></span>
-                QuizAI - AI-powered learning app
-              </div>
-              <div class="project-badge">
-                <span class="badge-icon"><i class="fas fa-qrcode"></i></span>
-                Curfew E-Pass System
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      
-      <!-- Leadership -->
-      <div class="achievement-item">
-        <div class="achievement-date">2023</div>
-        <div class="achievement-content">
-          <div class="achievement-icon leadership">
-            <i class="fas fa-users"></i>
-          </div>
-          <div class="achievement-details">
-            <h3>Leadership</h3>
-            <p>Organized tech events with 100+ participants</p>
-            <ul class="achievement-stats">
-              <li>Event Head - Nano Byte Fest</li>
-              <li>Event Head - ZettaByte 2.0</li>
-              <li>Placement Volunteer</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-      
-      <!-- Certifications -->
-      <<div class="achievement-item">
-  <div class="achievement-date">2022-2023</div>
-  <div class="achievement-content">
-    <div class="achievement-icon certs">
-      <i class="fas fa-certificate"></i>
-    </div>
-    <div class="achievement-details">
-      <h3>Certifications</h3>
-      <p>Completed specialized technical courses</p>
-      <div class="cert-badges">
-        <a href="https://tinyurl.com/aitoolscertificate" target="_blank" class="cert-badge ai">AI Tools</a>
-        <a href="https://tinyurl.com/Concept-of-DBMS" target="_blank" class="cert-badge dbms">DBMS</a>
-        <a href="https://tinyurl.com/remote-sensing-certificate" target="_blank" class="cert-badge isro">Remote Sensing</a>
-        <a href="https://drive.google.com/file/d/10oxk-tXIVhw1AqsJFU8ffGVVzsHsdE4m/view?usp=drive_link" target="_blank" class="cert-badge rpa">RPA</a>
-      </div>
-    </div>
-  </div>
-</div>
-
-</section>
-
-
-
-  <!-- Contact Section -->
   <section class="contact-section" id="contact">
     <div class="container">
       <h2><span class="section-title">Get In Touch</span></h2>
       <div class="contact-container">
         <div class="contact-info">
-          <h3>Let's connect!</h3>
-          <p>I'm currently available for internships and collaborative projects. Feel free to reach out!</p>
-          <div class="info-item">
-            <i class="fas fa-envelope"></i>
-            <span>ashutosh3276s16@gmail.com</span>
-          </div>
-          <div class="info-item">
-            <i class="fas fa-phone"></i>
-            <span>+91 9702420582</span>
-          </div>
-          <div class="info-item">
-            <i class="fas fa-map-marker-alt"></i>
-            <span>Vasai East, Mumbai, Maharashtra 401208</span>
-          </div>
-          <div class="social-icons">
-            <a href="https://github.com/ashutosh7034" aria-label="GitHub" target="_blank"><i class="fab fa-github"></i></a>
-            <a href="https://www.linkedin.com/in/ashutoshpandey34/" aria-label="LinkedIn" target="_blank"><i class="fab fa-linkedin-in"></i></a>
-            <a href="mailto:ashutosh3276s16@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
-            <a href="tel:+919702420582" aria-label="Phone"><i class="fas fa-phone"></i></a>
-          </div>
+          <h3>Let us connect</h3>
+          <p>I am open to collaborations, internships, and software opportunities.</p>
+          <div class="info-item"><i class="fas fa-envelope"></i><span>ashutosh3276s16@gmail.com</span></div>
+          <div class="info-item"><i class="fas fa-phone"></i><span>+91 9702420582</span></div>
+          <div class="info-item"><i class="fas fa-map-marker-alt"></i><span>Mumbai, India</span></div>
+          <div class="info-item"><i class="fab fa-linkedin"></i><a href="https://www.linkedin.com/in/ashutoshpandey34/" target="_blank" rel="noopener noreferrer">linkedin.com/in/ashutoshpandey34</a></div>
+          <div class="info-item"><i class="fab fa-github"></i><a href="https://github.com/ashutosh7034" target="_blank" rel="noopener noreferrer">github.com/ashutosh7034</a></div>
+          <div class="info-item"><i class="fas fa-globe"></i><a href="https://ashutoshpandey34.netlify.app" target="_blank" rel="noopener noreferrer">ashutoshpandey34.netlify.app</a></div>
         </div>
         <div class="contact-form">
           <form action="https://formspree.io/f/mrbqybwg" method="POST">
@@ -478,7 +376,6 @@
     </div>
   </section>
 
-  <!-- Footer -->
   <footer class="footer">
     <div class="container">
       <div class="footer-content">
@@ -486,28 +383,22 @@
         <p>Building digital solutions that make an impact.</p>
         <div class="footer-links">
           <a href="#about">About</a>
+          <a href="#education">Education</a>
           <a href="#skills">Skills</a>
           <a href="#projects">Projects</a>
           <a href="#contact">Contact</a>
         </div>
-        <div class="social-icons">
-          <a href="https://github.com/ashutosh7034" aria-label="GitHub" target="_blank"><i class="fab fa-github"></i></a>
-          <a href="https://www.linkedin.com/in/ashutoshpandey34/" aria-label="LinkedIn" target="_blank"><i class="fab fa-linkedin-in"></i></a>
-          <a href="mailto:ashutosh3276s16@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
-        </div>
       </div>
-      <div class="copyright">
-        © 2025 Ashutosh Pandey. All rights reserved.
-      </div>
+      <div class="copyright">© 2026 Ashutosh Pandey. All rights reserved.</div>
     </div>
   </footer>
 
-  <!-- Back to Top Button -->
-  <a href="#" class="back-to-top" aria-label="Back to top">
-    <i class="fas fa-arrow-up"></i>
-  </a>
+  <a href="#" class="back-to-top" aria-label="Back to top"><i class="fas fa-arrow-up"></i></a>
 
-  <!-- JavaScript -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.7.2/vanilla-tilt.min.js"></script>
   <script src="script.js"></script>
 </body>
 </html>
