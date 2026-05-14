@@ -799,6 +799,10 @@ textarea {
     text-align: center;
   }
 
+  .hero-image {
+    order: -1;
+  }
+
   .button-group,
   .social-icons {
     justify-content: center;
