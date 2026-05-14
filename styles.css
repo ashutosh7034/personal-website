@@ -801,6 +801,9 @@ textarea {
 
   .hero-image {
     order: -1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 
   .button-group,
@@ -869,6 +872,11 @@ textarea {
   .orb-back span {
     font-size: 0.88rem;
     line-height: 1.4;
+  }
+
+  .profile-container {
+    width: min(300px, 70vw);
+    margin: 0 auto;
   }
 }
 
