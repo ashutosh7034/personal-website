@@ -48,64 +48,64 @@ export default function ContactForm() {
   };
 
   return (
-    <section id="contact" className="py-24 sm:py-32 px-4 sm:px-6 lg:px-8 bg-[#FAF8F5]">
-      <div className="max-w-6xl mx-auto space-y-16">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start">
+    <section id="contact" className="py-16 sm:py-24 lg:py-32 px-4 sm:px-6 lg:px-8 bg-[#FAF8F5]">
+      <div className="max-w-6xl mx-auto space-y-12 sm:space-y-16">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 sm:gap-12 lg:gap-16 items-start">
           {/* Left Column: Human Invitation & Contact Details */}
-          <div className="lg:col-span-5 space-y-8">
+          <div className="lg:col-span-5 space-y-6 sm:space-y-8">
             <div>
               <span className="text-xs font-semibold text-accent uppercase tracking-wider">
                 Start a Conversation
               </span>
-              <h2 className="mt-1 font-display font-extrabold text-3xl sm:text-4xl text-brandText-primary tracking-tight leading-tight">
+              <h2 className="mt-1 font-display font-extrabold text-2xl sm:text-4xl text-brandText-primary tracking-tight leading-tight">
                 Have something worth building?
               </h2>
-              <p className="mt-4 text-base text-brandText-secondary leading-relaxed">
+              <p className="mt-3 sm:mt-4 text-sm sm:text-base text-brandText-secondary leading-relaxed">
                 I am actively exploring software engineering opportunities, applied AI systems, and technical collaborations. Whether you have a project idea, an open role, or a research question, my inbox is open.
               </p>
             </div>
 
             {/* Direct Contact List */}
-            <div className="space-y-4 pt-2">
+            <div className="space-y-3 sm:space-y-4 pt-1 sm:pt-2">
               <a
                 href={`mailto:${PERSONAL_INFO.email}`}
-                className="flex items-center gap-3.5 p-3.5 rounded-2xl bg-white border border-[#E5E0D8] text-sm text-brandText-primary hover:border-accent hover:text-accent transition-all shadow-sm"
+                className="flex items-center gap-3.5 p-3 sm:p-3.5 rounded-2xl bg-white border border-[#E5E0D8] text-xs sm:text-sm text-brandText-primary hover:border-accent hover:text-accent transition-all shadow-sm"
               >
-                <div className="p-2 rounded-xl bg-[#FAF8F5] text-accent">
+                <div className="p-2 rounded-xl bg-[#FAF8F5] text-accent shrink-0">
                   <Mail className="w-4 h-4" />
                 </div>
-                <div>
-                  <div className="text-[11px] text-brandText-muted font-medium">Email Directly</div>
-                  <div className="font-semibold">{PERSONAL_INFO.email}</div>
+                <div className="min-w-0 overflow-hidden text-ellipsis">
+                  <div className="text-[10px] sm:text-[11px] text-brandText-muted font-medium">Email Directly</div>
+                  <div className="font-semibold truncate">{PERSONAL_INFO.email}</div>
                 </div>
               </a>
 
               <a
                 href={`tel:${PERSONAL_INFO.phone}`}
-                className="flex items-center gap-3.5 p-3.5 rounded-2xl bg-white border border-[#E5E0D8] text-sm text-brandText-primary hover:border-accent hover:text-accent transition-all shadow-sm"
+                className="flex items-center gap-3.5 p-3 sm:p-3.5 rounded-2xl bg-white border border-[#E5E0D8] text-xs sm:text-sm text-brandText-primary hover:border-accent hover:text-accent transition-all shadow-sm"
               >
-                <div className="p-2 rounded-xl bg-[#FAF8F5] text-accent">
+                <div className="p-2 rounded-xl bg-[#FAF8F5] text-accent shrink-0">
                   <Phone className="w-4 h-4" />
                 </div>
                 <div>
-                  <div className="text-[11px] text-brandText-muted font-medium">Call / WhatsApp</div>
+                  <div className="text-[10px] sm:text-[11px] text-brandText-muted font-medium">Call / WhatsApp</div>
                   <div className="font-semibold">{PERSONAL_INFO.phone}</div>
                 </div>
               </a>
 
-              <div className="flex items-center gap-3.5 p-3.5 rounded-2xl bg-white border border-[#E5E0D8] text-sm text-brandText-primary shadow-sm">
-                <div className="p-2 rounded-xl bg-[#FAF8F5] text-accent">
+              <div className="flex items-center gap-3.5 p-3 sm:p-3.5 rounded-2xl bg-white border border-[#E5E0D8] text-xs sm:text-sm text-brandText-primary shadow-sm">
+                <div className="p-2 rounded-xl bg-[#FAF8F5] text-accent shrink-0">
                   <MapPin className="w-4 h-4" />
                 </div>
                 <div>
-                  <div className="text-[11px] text-brandText-muted font-medium">Base Location</div>
+                  <div className="text-[10px] sm:text-[11px] text-brandText-muted font-medium">Base Location</div>
                   <div className="font-semibold">{PERSONAL_INFO.location}</div>
                 </div>
               </div>
             </div>
 
             {/* Verified Social Profiles */}
-            <div className="flex items-center gap-3 pt-2">
+            <div className="flex flex-wrap items-center gap-2.5 sm:gap-3 pt-1 sm:pt-2">
               <a
                 href={PERSONAL_INFO.github}
                 target="_blank"
@@ -136,8 +136,8 @@ export default function ContactForm() {
           </div>
 
           {/* Right Column: Clean Validated Contact Form */}
-          <div className="lg:col-span-7 bg-white rounded-3xl border border-[#E5E0D8] p-6 sm:p-8 lg:p-10 shadow-editorial">
-            <form onSubmit={handleSubmit} className="space-y-5">
+          <div className="lg:col-span-7 bg-white rounded-2xl sm:rounded-3xl border border-[#E5E0D8] p-5 sm:p-8 lg:p-10 shadow-editorial">
+            <form onSubmit={handleSubmit} className="space-y-4 sm:space-y-5">
               {/* Honeypot field (hidden from humans) */}
               <input
                 type="text"
@@ -149,7 +149,7 @@ export default function ContactForm() {
                 autoComplete="off"
               />
 
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-5">
                 <div className="space-y-1.5">
                   <label htmlFor="name" className="text-xs font-semibold text-brandText-primary">
                     Your Name <span className="text-accent">*</span>
@@ -203,7 +203,7 @@ export default function ContactForm() {
                 <textarea
                   id="message"
                   required
-                  rows={5}
+                  rows={4}
                   value={formData.message}
                   onChange={(e) => setFormData({ ...formData, message: e.target.value })}
                   placeholder="Tell me about what you are working on, timelines, or your team..."

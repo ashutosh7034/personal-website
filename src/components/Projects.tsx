@@ -204,15 +204,13 @@ export default function Projects() {
               <h3 className="mt-1 font-display font-bold text-2xl sm:text-3xl text-brandText-primary tracking-tight">
                 Complete Project Archive ({PROJECT_ARCHIVE.length} Systems).
               </h3>
-            </div>
-
-            {/* Filter Pills */}
-            <div className="flex flex-wrap gap-2">
+            </div>            {/* Filter Pills with smooth horizontal scroll on mobile */}
+            <div className="flex items-center gap-2 overflow-x-auto pb-2 sm:pb-0 w-full sm:w-auto scrollbar-none no-scrollbar">
               {categories.map((cat) => (
                 <button
                   key={cat.value}
                   onClick={() => setArchiveFilter(cat.value)}
-                  className={`px-3 py-1.5 rounded-xl text-xs font-medium transition-all ${
+                  className={`px-3 py-1.5 rounded-xl text-xs font-medium transition-all shrink-0 ${
                     archiveFilter === cat.value
                       ? "bg-[#18181B] text-[#FAF8F5]"
                       : "bg-white border border-[#E5E0D8] text-brandText-secondary hover:text-brandText-primary"
@@ -225,7 +223,7 @@ export default function Projects() {
           </div>
 
           {/* Archive Cards Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-5">
             {filteredArchive.map((item) => (
               <div
                 key={item.id}
@@ -244,8 +242,8 @@ export default function Projects() {
                   </p>
                 </div>
 
-                <div className="pt-4 mt-4 border-t border-[#E5E0D8] flex items-center justify-between text-xs">
-                  <div className="flex flex-wrap gap-1.5 max-w-[80%]">
+                <div className="pt-4 mt-4 border-t border-[#E5E0D8] flex items-center justify-between text-xs gap-2">
+                  <div className="flex flex-wrap gap-1.5 max-w-[75%]">
                     {item.techStack.slice(0, 3).map((t) => (
                       <span
                         key={t}
@@ -256,13 +254,13 @@ export default function Projects() {
                     ))}
                   </div>
 
-                  <div className="flex items-center gap-1.5">
+                  <div className="flex items-center gap-1.5 shrink-0">
                     {item.githubUrl && (
                       <a
                         href={item.githubUrl}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="p-1.5 rounded-lg bg-[#FAF8F5] border border-[#E5E0D8] text-brandText-primary hover:text-accent transition-colors"
+                        className="p-2 rounded-lg bg-[#FAF8F5] border border-[#E5E0D8] text-brandText-primary hover:text-accent transition-colors"
                         aria-label="GitHub Repository"
                       >
                         <GithubIcon className="w-3.5 h-3.5" />
@@ -273,7 +271,7 @@ export default function Projects() {
                         href={item.liveUrl}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="p-1.5 rounded-lg bg-[#FAF8F5] border border-[#E5E0D8] text-brandText-primary hover:text-accent transition-colors"
+                        className="p-2 rounded-lg bg-[#FAF8F5] border border-[#E5E0D8] text-brandText-primary hover:text-accent transition-colors"
                         aria-label="Live Demo"
                       >
                         <ExternalLink className="w-3.5 h-3.5" />
@@ -292,7 +290,7 @@ export default function Projects() {
           ======================================================== */}
       <AnimatePresence>
         {activeModalProject && (
-          <div className="fixed inset-0 z-50 flex items-center justify-center p-4 sm:p-6 overflow-y-auto">
+          <div className="fixed inset-0 z-50 flex items-center justify-center p-3 sm:p-6 overflow-y-auto">
             <motion.div
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
@@ -305,15 +303,15 @@ export default function Projects() {
               initial={{ opacity: 0, scale: 0.95, y: 16 }}
               animate={{ opacity: 1, scale: 1, y: 0 }}
               exit={{ opacity: 0, scale: 0.95, y: 16 }}
-              className="relative w-full max-w-3xl bg-[#FAF8F5] border border-[#E5E0D8] rounded-3xl p-6 sm:p-8 shadow-cardHover z-10 max-h-[90vh] overflow-y-auto space-y-6"
+              className="relative w-full max-w-3xl bg-[#FAF8F5] border border-[#E5E0D8] rounded-2xl sm:rounded-3xl p-5 sm:p-8 shadow-cardHover z-10 max-h-[92dvh] overflow-y-auto space-y-5 sm:space-y-6"
             >
               {/* Modal Header */}
-              <div className="flex items-start justify-between border-b border-[#E5E0D8] pb-4">
+              <div className="flex items-start justify-between border-b border-[#E5E0D8] pb-4 gap-3">
                 <div>
                   <span className="text-xs font-semibold text-accent uppercase tracking-wider">
                     {activeModalProject.category}
                   </span>
-                  <h3 className="font-display font-bold text-2xl sm:text-3xl text-brandText-primary mt-1">
+                  <h3 className="font-display font-bold text-xl sm:text-3xl text-brandText-primary mt-1">
                     {activeModalProject.title}
                   </h3>
                   {activeModalProject.subtitle && (
@@ -324,7 +322,7 @@ export default function Projects() {
                 </div>
                 <button
                   onClick={() => setActiveModalProject(null)}
-                  className="p-2 rounded-xl bg-white border border-[#E5E0D8] text-brandText-muted hover:text-brandText-primary transition-colors"
+                  className="p-2 rounded-xl bg-white border border-[#E5E0D8] text-brandText-muted hover:text-brandText-primary transition-colors shrink-0"
                   aria-label="Close Case Study Modal"
                 >
                   <X className="w-5 h-5" />
@@ -332,15 +330,15 @@ export default function Projects() {
               </div>
 
               {/* Modal Content Sections */}
-              <div className="space-y-5 text-sm text-brandText-secondary leading-relaxed">
-                <div className="p-4 rounded-xl bg-white border border-[#E5E0D8] space-y-1.5">
+              <div className="space-y-4 sm:space-y-5 text-xs sm:text-sm text-brandText-secondary leading-relaxed">
+                <div className="p-3.5 sm:p-4 rounded-xl bg-white border border-[#E5E0D8] space-y-1.5">
                   <h4 className="font-semibold text-brandText-primary text-xs uppercase tracking-wider text-accent">
                     The Problem & Context
                   </h4>
                   <p>{activeModalProject.problem}</p>
                 </div>
 
-                <div className="p-4 rounded-xl bg-white border border-[#E5E0D8] space-y-1.5">
+                <div className="p-3.5 sm:p-4 rounded-xl bg-white border border-[#E5E0D8] space-y-1.5">
                   <h4 className="font-semibold text-brandText-primary text-xs uppercase tracking-wider text-accent">
                     What Was Built
                   </h4>
@@ -348,7 +346,7 @@ export default function Projects() {
                 </div>
 
                 {activeModalProject.myContribution && (
-                  <div className="p-4 rounded-xl bg-white border border-[#E5E0D8] space-y-1.5">
+                  <div className="p-3.5 sm:p-4 rounded-xl bg-white border border-[#E5E0D8] space-y-1.5">
                     <h4 className="font-semibold text-brandText-primary text-xs uppercase tracking-wider text-accent">
                       My Specific Engineering Contribution
                     </h4>
@@ -357,7 +355,7 @@ export default function Projects() {
                 )}
 
                 {activeModalProject.outcome && (
-                  <div className="p-4 rounded-xl bg-emerald-50 border border-emerald-200 text-emerald-900 space-y-1">
+                  <div className="p-3.5 sm:p-4 rounded-xl bg-emerald-50 border border-emerald-200 text-emerald-900 space-y-1">
                     <h4 className="font-semibold text-xs uppercase tracking-wider text-emerald-800">
                       Verified Outcome
                     </h4>
@@ -367,8 +365,8 @@ export default function Projects() {
               </div>
 
               {/* Modal Footer */}
-              <div className="pt-4 border-t border-[#E5E0D8] flex items-center justify-between">
-                <div className="flex flex-wrap gap-2">
+              <div className="pt-4 border-t border-[#E5E0D8] flex flex-col sm:flex-row items-stretch sm:items-center justify-between gap-3">
+                <div className="flex flex-wrap gap-1.5">
                   {activeModalProject.techStack.map((tech) => (
                     <span
                       key={tech}
@@ -384,7 +382,7 @@ export default function Projects() {
                     href={activeModalProject.githubUrl}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center gap-1.5 px-4 py-2 rounded-xl bg-[#18181B] text-[#FAF8F5] text-xs font-semibold hover:bg-accent transition-colors"
+                    className="inline-flex items-center justify-center gap-1.5 px-4 py-2.5 rounded-xl bg-[#18181B] text-[#FAF8F5] text-xs font-semibold hover:bg-accent transition-colors"
                   >
                     <GithubIcon className="w-3.5 h-3.5" />
                     <span>View Repository</span>

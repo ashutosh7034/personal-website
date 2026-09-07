@@ -34,15 +34,15 @@ export default function ProjectMapping() {
         </div>
 
         {/* Interactive Matrix Grid */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 sm:gap-8 items-start">
           {/* Left Column: Technology Selector Pills */}
-          <div className="lg:col-span-5 bg-white rounded-2xl border border-[#E5E0D8] p-5 shadow-sm space-y-4">
+          <div className="lg:col-span-5 bg-white rounded-2xl border border-[#E5E0D8] p-4 sm:p-5 shadow-sm space-y-3 sm:space-y-4">
             <div className="text-xs font-semibold text-brandText-primary uppercase tracking-wider pb-2 border-b border-[#E5E0D8] flex items-center justify-between">
               <span>Select Technology Stack</span>
               <span className="text-accent font-medium">{TECH_PROJECT_MAPPINGS.length} Mapped</span>
             </div>
 
-            <div className="flex flex-wrap gap-2">
+            <div className="flex flex-wrap gap-1.5 sm:gap-2">
               {TECH_PROJECT_MAPPINGS.map((item) => {
                 const isSelected = selectedTech === item.tech;
                 return (
@@ -70,14 +70,14 @@ export default function ProjectMapping() {
           </div>
 
           {/* Right Column: Dynamic Project Output Card */}
-          <div className="lg:col-span-7 bg-white rounded-2xl border border-[#E5E0D8] p-6 sm:p-7 shadow-editorial space-y-6">
+          <div className="lg:col-span-7 bg-white rounded-2xl border border-[#E5E0D8] p-5 sm:p-7 shadow-editorial space-y-5 sm:space-y-6">
             <div className="flex items-center justify-between border-b border-[#E5E0D8] pb-4">
               <div className="flex items-center gap-2.5">
                 <div className="p-2 rounded-xl bg-[#FAF8F5] border border-[#E5E0D8] text-accent">
                   <GitBranch className="w-4 h-4" />
                 </div>
                 <div>
-                  <h3 className="font-display font-bold text-lg text-brandText-primary">
+                  <h3 className="font-display font-bold text-base sm:text-lg text-brandText-primary">
                     Systems Built with {activeMapping.tech}
                   </h3>
                   <div className="text-xs text-brandText-muted">
@@ -88,7 +88,7 @@ export default function ProjectMapping() {
             </div>
 
             {/* Mapped Project Cards */}
-            <div className="space-y-3.5">
+            <div className="space-y-3 sm:space-y-3.5">
               {activeMapping.projectIds.map((projectName, idx) => {
                 const archiveMatch = PROJECT_ARCHIVE.find(
                   (p) =>
@@ -102,15 +102,15 @@ export default function ProjectMapping() {
                     initial={{ opacity: 0, x: 8 }}
                     animate={{ opacity: 1, x: 0 }}
                     transition={{ duration: 0.3, delay: idx * 0.05 }}
-                    className="p-4 rounded-xl bg-[#FAF8F5] border border-[#E5E0D8] hover:border-[#D1C7B7] transition-all space-y-2"
+                    className="p-3.5 sm:p-4 rounded-xl bg-[#FAF8F5] border border-[#E5E0D8] hover:border-[#D1C7B7] transition-all space-y-2"
                   >
                     <div className="flex items-start justify-between gap-2">
-                      <div className="font-display font-bold text-sm text-brandText-primary flex items-center gap-2">
+                      <div className="font-display font-bold text-xs sm:text-sm text-brandText-primary flex items-center gap-2">
                         <CheckCircle2 className="w-4 h-4 text-accent shrink-0" />
                         <span>{projectName}</span>
                       </div>
                       {archiveMatch?.year && (
-                        <span className="text-[11px] font-mono text-brandText-muted">
+                        <span className="text-[10px] sm:text-[11px] font-mono text-brandText-muted">
                           {archiveMatch.year}
                         </span>
                       )}

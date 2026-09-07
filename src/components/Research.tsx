@@ -102,19 +102,19 @@ export default function Research() {
             </p>
 
             {/* Key Empirical Survey Metrics */}
-            <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 pt-2">
+            <div className="grid grid-cols-2 sm:grid-cols-4 gap-2.5 sm:gap-4 pt-2">
               {paper.keyMetrics.map((metric, idx) => (
                 <div
                   key={idx}
-                  className="p-4 rounded-2xl bg-[#FAF8F5] border border-[#E5E0D8] space-y-1 text-left"
+                  className="p-3 sm:p-4 rounded-2xl bg-[#FAF8F5] border border-[#E5E0D8] space-y-1 text-left"
                 >
-                  <div className="font-display font-black text-2xl sm:text-3xl text-accent">
+                  <div className="font-display font-black text-xl sm:text-3xl text-accent">
                     {metric.value}
                   </div>
                   <div className="font-semibold text-xs text-brandText-primary">
                     {metric.label}
                   </div>
-                  <p className="text-[11px] text-brandText-muted leading-tight pt-0.5">
+                  <p className="text-[10px] sm:text-[11px] text-brandText-muted leading-tight pt-0.5">
                     {metric.detail}
                   </p>
                 </div>
@@ -122,7 +122,7 @@ export default function Research() {
             </div>
 
             {/* Literature vs Survey Distinction Note */}
-            <div className="p-4 rounded-2xl bg-[#FAF8F5] border border-[#E5E0D8] flex items-start gap-3 text-xs sm:text-sm text-brandText-secondary leading-relaxed">
+            <div className="p-3.5 sm:p-4 rounded-2xl bg-[#FAF8F5] border border-[#E5E0D8] flex items-start gap-2.5 sm:gap-3 text-xs sm:text-sm text-brandText-secondary leading-relaxed">
               <Info className="w-4 h-4 text-accent shrink-0 mt-0.5" />
               <div>
                 <strong className="text-brandText-primary">Research Nuance: </strong>
@@ -131,7 +131,7 @@ export default function Research() {
             </div>
 
             {/* Action Bar */}
-            <div className="pt-2 flex flex-wrap items-center justify-between gap-4 border-t border-[#E5E0D8]">
+            <div className="pt-2 flex flex-col sm:flex-row items-stretch sm:items-center justify-between gap-3 sm:gap-4 border-t border-[#E5E0D8]">
               <div className="flex flex-wrap gap-1.5">
                 {paper.tags.map((tag) => (
                   <span
@@ -145,9 +145,9 @@ export default function Research() {
 
               <button
                 onClick={() => setModalOpen(true)}
-                className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-[#18181B] text-[#FAF8F5] text-xs font-semibold hover:bg-accent transition-colors shadow-sm"
+                className="inline-flex items-center justify-center gap-2 px-5 py-3 sm:py-2.5 rounded-xl bg-[#18181B] text-[#FAF8F5] text-xs font-semibold hover:bg-accent transition-colors shadow-sm"
               >
-                <span>Read Research Summary & Empirical Breakdown</span>
+                <span>Read Research Summary & Findings</span>
                 <ArrowRight className="w-3.5 h-3.5" />
               </button>
             </div>
@@ -167,7 +167,7 @@ export default function Research() {
             </span>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-6">
             {BOOK_CHAPTERS.map((chapter, idx) => (
               <motion.div
                 key={chapter.id}
@@ -175,7 +175,7 @@ export default function Research() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.4, delay: idx * 0.08 }}
-                className="bg-white rounded-2xl border border-[#E5E0D8] p-6 shadow-sm hover:border-[#D1C7B7] hover:shadow-editorial transition-all flex flex-col justify-between"
+                className="bg-white rounded-2xl border border-[#E5E0D8] p-5 sm:p-6 shadow-sm hover:border-[#D1C7B7] hover:shadow-editorial transition-all flex flex-col justify-between"
               >
                 <div className="space-y-4">
                   {/* Top Meta: Chapter Number & Date */}
@@ -215,7 +215,7 @@ export default function Research() {
                 </div>
 
                 {/* Tags */}
-                <div className="pt-4 mt-6 border-t border-[#E5E0D8] flex flex-wrap gap-1.5">
+                <div className="pt-4 mt-5 border-t border-[#E5E0D8] flex flex-wrap gap-1.5">
                   {chapter.tags.map((tag) => (
                     <span
                       key={tag}
@@ -236,7 +236,7 @@ export default function Research() {
           ======================================================== */}
       <AnimatePresence>
         {modalOpen && (
-          <div className="fixed inset-0 z-50 flex items-center justify-center p-4 sm:p-6 overflow-y-auto">
+          <div className="fixed inset-0 z-50 flex items-center justify-center p-3 sm:p-6 overflow-y-auto">
             <motion.div
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
@@ -249,16 +249,16 @@ export default function Research() {
               initial={{ opacity: 0, scale: 0.95, y: 16 }}
               animate={{ opacity: 1, scale: 1, y: 0 }}
               exit={{ opacity: 0, scale: 0.95, y: 16 }}
-              className="relative w-full max-w-3xl bg-[#FAF8F5] border border-[#E5E0D8] rounded-3xl p-6 sm:p-8 shadow-cardHover z-10 max-h-[90vh] overflow-y-auto space-y-6"
+              className="relative w-full max-w-3xl bg-[#FAF8F5] border border-[#E5E0D8] rounded-2xl sm:rounded-3xl p-5 sm:p-8 shadow-cardHover z-10 max-h-[92dvh] overflow-y-auto space-y-5 sm:space-y-6"
             >
               {/* Modal Header */}
-              <div className="flex items-start justify-between border-b border-[#E5E0D8] pb-4">
+              <div className="flex items-start justify-between border-b border-[#E5E0D8] pb-4 gap-3">
                 <div className="space-y-1">
                   <div className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-md bg-amber-50 border border-amber-200 text-amber-900 text-xs font-bold">
                     <Award className="w-3.5 h-3.5 text-amber-700" />
                     <span>{paper.award}</span>
                   </div>
-                  <h3 className="font-display font-bold text-xl sm:text-2xl text-brandText-primary mt-1">
+                  <h3 className="font-display font-bold text-lg sm:text-2xl text-brandText-primary mt-1">
                     {paper.title}
                   </h3>
                   <p className="text-xs text-brandText-secondary font-medium">
@@ -275,9 +275,9 @@ export default function Research() {
               </div>
 
               {/* Modal Body Sections */}
-              <div className="space-y-5 text-xs sm:text-sm text-brandText-secondary leading-relaxed">
+              <div className="space-y-4 sm:space-y-5 text-xs sm:text-sm text-brandText-secondary leading-relaxed">
                 {/* Research Question & Importance */}
-                <div className="p-4 rounded-2xl bg-white border border-[#E5E0D8] space-y-2">
+                <div className="p-3.5 sm:p-4 rounded-2xl bg-white border border-[#E5E0D8] space-y-2">
                   <h4 className="font-semibold text-brandText-primary text-xs uppercase tracking-wider text-accent">
                     Research Question & Rationale
                   </h4>
@@ -288,7 +288,7 @@ export default function Research() {
                 </div>
 
                 {/* Methodology */}
-                <div className="p-4 rounded-2xl bg-white border border-[#E5E0D8] space-y-2">
+                <div className="p-3.5 sm:p-4 rounded-2xl bg-white border border-[#E5E0D8] space-y-2">
                   <h4 className="font-semibold text-brandText-primary text-xs uppercase tracking-wider text-accent">
                     Dual-Track Methodology
                   </h4>
@@ -296,11 +296,11 @@ export default function Research() {
                 </div>
 
                 {/* Primary Survey Key Findings */}
-                <div className="p-4 rounded-2xl bg-white border border-[#E5E0D8] space-y-3">
+                <div className="p-3.5 sm:p-4 rounded-2xl bg-white border border-[#E5E0D8] space-y-3">
                   <h4 className="font-semibold text-brandText-primary text-xs uppercase tracking-wider text-accent">
                     Primary Survey Empirical Findings (n = 179)
                   </h4>
-                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5 sm:gap-3">
                     {paper.keyMetrics.map((m, idx) => (
                       <div key={idx} className="p-3 rounded-xl bg-[#FAF8F5] border border-[#E5E0D8] space-y-1">
                         <div className="font-display font-extrabold text-lg text-accent">
@@ -318,7 +318,7 @@ export default function Research() {
                 </div>
 
                 {/* Literature Review vs Empirical Survey */}
-                <div className="p-4 rounded-2xl bg-white border border-[#E5E0D8] space-y-1.5">
+                <div className="p-3.5 sm:p-4 rounded-2xl bg-white border border-[#E5E0D8] space-y-1.5">
                   <h4 className="font-semibold text-brandText-primary text-xs uppercase tracking-wider text-accent">
                     Literature Review vs. Student Survey Nuance
                   </h4>
@@ -326,7 +326,7 @@ export default function Research() {
                 </div>
 
                 {/* Critical Challenges */}
-                <div className="p-4 rounded-2xl bg-white border border-[#E5E0D8] space-y-2">
+                <div className="p-3.5 sm:p-4 rounded-2xl bg-white border border-[#E5E0D8] space-y-2">
                   <h4 className="font-semibold text-brandText-primary text-xs uppercase tracking-wider text-accent">
                     Identified Educational Challenges
                   </h4>
@@ -341,7 +341,7 @@ export default function Research() {
                 </div>
 
                 {/* Honest Research Limitations */}
-                <div className="p-4 rounded-2xl bg-amber-50 border border-amber-200 text-amber-900 space-y-1.5">
+                <div className="p-3.5 sm:p-4 rounded-2xl bg-amber-50 border border-amber-200 text-amber-900 space-y-1.5">
                   <h4 className="font-semibold text-xs uppercase tracking-wider text-amber-800 flex items-center gap-1.5">
                     <AlertTriangle className="w-4 h-4" />
                     <span>Research Limitations</span>
@@ -350,7 +350,7 @@ export default function Research() {
                 </div>
 
                 {/* Conclusion */}
-                <div className="p-4 rounded-2xl bg-emerald-50 border border-emerald-200 text-emerald-900 space-y-1.5">
+                <div className="p-3.5 sm:p-4 rounded-2xl bg-emerald-50 border border-emerald-200 text-emerald-900 space-y-1.5">
                   <h4 className="font-semibold text-xs uppercase tracking-wider text-emerald-800">
                     Key Conclusion
                   </h4>
@@ -359,13 +359,13 @@ export default function Research() {
               </div>
 
               {/* Modal Footer */}
-              <div className="pt-4 border-t border-[#E5E0D8] flex items-center justify-between text-xs text-brandText-muted">
+              <div className="pt-4 border-t border-[#E5E0D8] flex flex-col sm:flex-row items-stretch sm:items-center justify-between gap-3 text-xs text-brandText-muted">
                 <div>
                   <strong>Citation:</strong> Pandey et al., MULTICON
                 </div>
                 <button
                   onClick={() => setModalOpen(false)}
-                  className="px-4 py-2 rounded-xl bg-[#18181B] text-[#FAF8F5] font-semibold hover:bg-accent transition-colors"
+                  className="px-4 py-2.5 rounded-xl bg-[#18181B] text-[#FAF8F5] font-semibold hover:bg-accent transition-colors"
                 >
                   Close Summary
                 </button>
