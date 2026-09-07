@@ -15,8 +15,8 @@ import {
   Smartphone,
   CheckCircle2,
   FileText,
-  MapPin,
-  Clock,
+  Search,
+  Filter,
 } from "lucide-react";
 import { GithubIcon } from "@/components/Icons";
 import { FEATURED_PROJECTS, PROJECT_ARCHIVE } from "@/lib/data";
@@ -25,43 +25,52 @@ import { Project, ArchiveProject } from "@/lib/types";
 export default function Projects() {
   const [activeModalProject, setActiveModalProject] = useState<Project | null>(null);
   const [archiveFilter, setArchiveFilter] = useState<string>("all");
+  const [searchQuery, setSearchQuery] = useState<string>("");
 
   const filteredArchive = PROJECT_ARCHIVE.filter((p) => {
-    if (archiveFilter === "all") return true;
-    return p.archiveCategory === archiveFilter;
+    const matchesCategory = archiveFilter === "all" || p.archiveCategory === archiveFilter;
+    const matchesSearch =
+      searchQuery === "" ||
+      p.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
+      p.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
+      p.techStack.some((t) => t.toLowerCase().includes(searchQuery.toLowerCase()));
+
+    return matchesCategory && matchesSearch;
   });
 
   const categories = [
     { label: "All Repositories", value: "all", count: PROJECT_ARCHIVE.length },
     { label: "Applied AI", value: "ai", count: PROJECT_ARCHIVE.filter((p) => p.archiveCategory === "ai").length },
     { label: "Full-Stack", value: "fullstack", count: PROJECT_ARCHIVE.filter((p) => p.archiveCategory === "fullstack").length },
-    { label: "Hackathons", value: "hackathon", count: PROJECT_ARCHIVE.filter((p) => p.archiveCategory === "hackathon").length },
+    { label: "Backend", value: "backend", count: PROJECT_ARCHIVE.filter((p) => p.archiveCategory === "backend").length },
     { label: "Mobile", value: "mobile", count: PROJECT_ARCHIVE.filter((p) => p.archiveCategory === "mobile").length },
+    { label: "Hackathons", value: "hackathon", count: PROJECT_ARCHIVE.filter((p) => p.archiveCategory === "hackathon").length },
+    { label: "Academic", value: "academic", count: PROJECT_ARCHIVE.filter((p) => p.archiveCategory === "academic").length },
   ];
 
   return (
     <section id="projects" className="py-24 sm:py-32 px-4 sm:px-6 lg:px-8 border-b border-[#E5E0D8]">
       <div className="max-w-6xl mx-auto space-y-24">
         {/* ========================================================
-            PART 1: FEATURED PROJECTS (INDIVIDUALIZED TREATMENTS)
+            PART 1: 3 BEST FEATURED PROJECTS (FLAGSHIP SYSTEMS)
             ======================================================== */}
         <div>
           {/* Header */}
           <div className="flex flex-col sm:flex-row sm:items-end justify-between mb-16 gap-4 border-b border-[#E5E0D8] pb-6">
             <div>
               <span className="text-xs font-semibold text-accent uppercase tracking-wider">
-                Selected Work
+                Flagship Systems
               </span>
               <h2 className="mt-1 font-display font-extrabold text-3xl sm:text-4xl text-brandText-primary tracking-tight">
                 Featured Projects.
               </h2>
             </div>
             <p className="text-sm text-brandText-muted">
-              5 core systems spanning Applied AI, Full-Stack, and Geospatial telemetry.
+              Top 3 selected engineering architectures across Geospatial Telemetry, Applied AI, and Enterprise Systems.
             </p>
           </div>
 
-          {/* Project List with Controlled Asymmetry */}
+          {/* 3 Featured Projects */}
           <div className="space-y-16">
             {FEATURED_PROJECTS.map((project, index) => {
               return (
@@ -70,13 +79,13 @@ export default function Projects() {
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true, margin: "-60px" }}
-                  transition={{ duration: 0.5, delay: index * 0.05 }}
+                  transition={{ duration: 0.5, delay: index * 0.08 }}
                   className="bg-white rounded-3xl border border-[#E5E0D8] p-6 sm:p-8 lg:p-10 shadow-editorial hover:border-[#D1C7B7] transition-all"
                 >
                   {/* Top Meta Bar */}
                   <div className="flex flex-wrap items-center justify-between gap-4 pb-6 border-b border-[#E5E0D8]">
                     <div className="flex items-center gap-3">
-                      <span className="font-display font-extrabold text-xl text-accent">
+                      <span className="font-display font-extrabold text-2xl text-accent">
                         {project.number}
                       </span>
                       <span className="text-[#D1C7B7]">•</span>
@@ -191,35 +200,50 @@ export default function Projects() {
         </div>
 
         {/* ========================================================
-            PART 2: COMPLETE PROJECT ARCHIVE
+            PART 2: COMPLETE REPOSITORY ARCHIVE (23+ AUDITED GITHUB PROJECTS)
             ======================================================== */}
         <div className="pt-12 border-t border-[#E5E0D8]">
           <div className="flex flex-col sm:flex-row sm:items-end justify-between mb-8 gap-4">
             <div>
               <span className="text-xs font-semibold text-accent uppercase tracking-wider">
-                Explore More
+                Full Repository Index
               </span>
               <h3 className="mt-1 font-display font-bold text-2xl sm:text-3xl text-brandText-primary tracking-tight">
-                Project Archive.
+                Project Archive ({PROJECT_ARCHIVE.length} Repositories).
               </h3>
+              <p className="text-xs text-brandText-muted mt-1">
+                Audited and extracted directly from GitHub (ashutosh7034).
+              </p>
             </div>
 
-            {/* Filter Pills */}
-            <div className="flex flex-wrap gap-2">
-              {categories.map((cat) => (
-                <button
-                  key={cat.value}
-                  onClick={() => setArchiveFilter(cat.value)}
-                  className={`px-3.5 py-1.5 rounded-xl text-xs font-medium transition-all ${
-                    archiveFilter === cat.value
-                      ? "bg-[#18181B] text-[#FAF8F5]"
-                      : "bg-white border border-[#E5E0D8] text-brandText-secondary hover:text-brandText-primary"
-                  }`}
-                >
-                  {cat.label} ({cat.count})
-                </button>
-              ))}
+            {/* Quick Search */}
+            <div className="relative w-full sm:w-64">
+              <Search className="w-4 h-4 text-brandText-muted absolute left-3 top-1/2 -translate-y-1/2" />
+              <input
+                type="text"
+                value={searchQuery}
+                onChange={(e) => setSearchQuery(e.target.value)}
+                placeholder="Search projects or tech..."
+                className="w-full pl-9 pr-4 py-2 rounded-xl bg-white border border-[#E5E0D8] text-xs text-brandText-primary placeholder:text-brandText-muted focus:border-accent focus:outline-none"
+              />
             </div>
+          </div>
+
+          {/* Filter Pills */}
+          <div className="flex flex-wrap gap-2 mb-8">
+            {categories.map((cat) => (
+              <button
+                key={cat.value}
+                onClick={() => setArchiveFilter(cat.value)}
+                className={`px-3.5 py-1.5 rounded-xl text-xs font-medium transition-all ${
+                  archiveFilter === cat.value
+                    ? "bg-[#18181B] text-[#FAF8F5]"
+                    : "bg-white border border-[#E5E0D8] text-brandText-secondary hover:text-brandText-primary"
+                }`}
+              >
+                {cat.label} ({cat.count})
+              </button>
+            ))}
           </div>
 
           {/* Archive Cards Grid */}
@@ -237,6 +261,11 @@ export default function Projects() {
                   <h4 className="font-display font-bold text-base text-brandText-primary">
                     {item.title}
                   </h4>
+                  {item.highlight && (
+                    <div className="mt-1 text-[11px] font-semibold text-emerald-800 bg-emerald-50 px-2 py-0.5 rounded-md inline-block">
+                      {item.highlight}
+                    </div>
+                  )}
                   <p className="mt-2 text-xs text-brandText-secondary leading-relaxed">
                     {item.description}
                   </p>
