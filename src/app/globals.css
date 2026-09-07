@@ -4,42 +4,42 @@
 
 @layer base {
   :root {
-    --bg-primary: #0A0B0D;
-    --bg-secondary: #121417;
-    --bg-tertiary: #1A1D21;
-    --bg-subtle: #24292F;
+    --bg-paper: #FAF8F5;
+    --bg-card: #FFFFFF;
+    --bg-subtle: #F4EFEA;
+    --bg-elevated: #EDE6DD;
     
-    --text-primary: #F3F4F6;
-    --text-secondary: #9CA3AF;
-    --text-muted: #6B7280;
+    --ink-primary: #18181B;
+    --ink-secondary: #4B5563;
+    --ink-muted: #71717A;
 
-    --accent: #F97316;
-    --accent-hover: #EA580C;
-    --accent-muted: rgba(249, 115, 22, 0.12);
-    --accent-border: rgba(249, 115, 22, 0.35);
+    --accent: #C2410C;
+    --accent-hover: #9A3412;
+    --accent-muted: rgba(194, 65, 12, 0.08);
+    --accent-border: rgba(194, 65, 12, 0.25);
 
-    --border-subtle: rgba(255, 255, 255, 0.08);
-    --border-strong: rgba(255, 255, 255, 0.16);
+    --border-deckled: #E5E0D8;
+    --border-subtle: #EDE8E1;
   }
 
   html {
     scroll-behavior: smooth;
     scroll-padding-top: 80px;
-    background-color: var(--bg-primary);
-    color: var(--text-primary);
+    background-color: var(--bg-paper);
+    color: var(--ink-primary);
     font-feature-settings: "cv02", "cv03", "cv04", "cv11";
     -webkit-text-size-adjust: 100%;
     overflow-x: hidden;
   }
 
   body {
-    background-color: #0A0B0D;
-    color: #F3F4F6;
+    background-color: #FAF8F5;
+    color: #18181B;
     overflow-x: hidden;
     width: 100%;
     min-width: 320px;
-    selection-background-color: #F97316;
-    selection-color: #FFFFFF;
+    selection-background-color: rgba(194, 65, 12, 0.2);
+    selection-color: #18181B;
   }
 
   /* Prevent iOS input zoom on focus by ensuring font-size >= 16px */
@@ -51,22 +51,9 @@
   }
 
   ::selection {
-    background-color: rgba(249, 115, 22, 0.3);
-    color: #FFFFFF;
+    background-color: rgba(194, 65, 12, 0.18);
+    color: #18181B;
   }
-}
-
-/* Custom Tactical Grid Background with responsive opacity */
-.bg-grid-pattern {
-  background-size: 32px 32px;
-  background-image: 
-    linear-gradient(to right, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
-    linear-gradient(to bottom, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
-}
-
-.bg-dot-pattern {
-  background-image: radial-gradient(rgba(255, 255, 255, 0.08) 1px, transparent 1px);
-  background-size: 24px 24px;
 }
 
 /* Custom Scrollbar */
@@ -76,21 +63,21 @@
 }
 
 ::-webkit-scrollbar-track {
-  background: #0A0B0D;
+  background: #FAF8F5;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #24292F;
+  background: #D8D2C7;
   border-radius: 3px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #F97316;
+  background: #C2410C;
 }
 
 /* Accessibility: Focus outlines */
 a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visible {
-  outline: 2px solid #F97316;
+  outline: 2px solid #C2410C;
   outline-offset: 3px;
 }
 
@@ -104,12 +91,4 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
     transition-duration: 0.01ms !important;
     scroll-behavior: auto !important;
   }
-}
-
-/* Editorial Monospace Badge */
-.editorial-badge {
-  font-family: var(--font-mono), monospace;
-  font-size: 0.75rem;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
 }

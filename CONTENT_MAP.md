@@ -1,3 +1,4 @@
+
 # CONTENT MAP — 100% VERIFIED SOURCE OF TRUTH
 
 This document tracks every piece of biographical, technical, academic, and project data included on the portfolio back to its authentic origin. Zero fabricated metrics, users, or projects.

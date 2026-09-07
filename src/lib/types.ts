@@ -9,6 +9,7 @@ export interface Project {
   number: string;
   title: string;
   shortTitle?: string;
+  subtitle?: string;
   category: string;
   archiveCategory: "ai" | "fullstack" | "backend" | "mobile" | "hackathon" | "academic";
   year: string;
@@ -25,6 +26,7 @@ export interface Project {
   githubUrl?: string;
   liveUrl?: string;
   featured: boolean;
+  badge?: string;
   hackathonBadge?: string;
 }
 
@@ -48,7 +50,7 @@ export interface SkillCategory {
   skills: {
     name: string;
     badge?: string;
-    highlightProjects?: string[]; // IDs of projects using this skill
+    highlightProjects?: string[];
   }[];
 }
 
@@ -80,6 +82,7 @@ export interface PublicationItem {
   authors: string;
   venue?: string;
   summary: string;
+  award?: string;
   tags: string[];
 }
 

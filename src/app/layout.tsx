@@ -12,14 +12,14 @@ const jakarta = Plus_Jakarta_Sans({
 const inter = Inter({
   subsets: ["latin"],
   variable: "--font-sans",
-  weight: ["300", "400", "500", "600"],
+  weight: ["400", "500", "600"],
   display: "swap",
 });
 
 const jetbrainsMono = JetBrains_Mono({
   subsets: ["latin"],
   variable: "--font-mono",
-  weight: ["400", "500", "600"],
+  weight: ["400", "500"],
   display: "swap",
 });
 
@@ -27,7 +27,7 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://ashutoshpandey34.netlify.app"),
   title: "Ashutosh Pandey — Software Developer",
   description:
-    "Software Developer specializing in Full-Stack systems, Backend architecture, SQL/NoSQL databases, and Applied AI (RAG pipelines, LangChain, FAISS). MCA @ TCET & BS Data Science @ IIT Madras.",
+    "Software Developer building full-stack applications, applied AI pipelines, and data systems. MCA @ TCET (9.14 CGPA) and BS Data Science @ IIT Madras.",
   keywords: [
     "Ashutosh Pandey",
     "Software Developer",
@@ -37,9 +37,9 @@ export const metadata: Metadata = {
     "LangChain",
     "FAISS",
     "Python",
-    "Java",
     "Next.js",
-    "Mumbai Developer",
+    "FastAPI",
+    "Mumbai",
     "TCET",
     "IIT Madras",
   ],
@@ -51,7 +51,7 @@ export const metadata: Metadata = {
     url: "https://ashutoshpandey34.netlify.app",
     title: "Ashutosh Pandey — Software Developer",
     description:
-      "I build software that turns ideas into useful systems. Full-Stack, Backend, and Applied AI.",
+      "I build software that turns ideas into useful systems. Full-Stack, Applied AI, and Data.",
     siteName: "Ashutosh Pandey Portfolio",
     images: [
       {
@@ -66,7 +66,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Ashutosh Pandey — Software Developer",
     description:
-      "Software Developer specializing in Full-Stack development and Applied AI (RAG, LangChain, FAISS).",
+      "Software Developer building full-stack applications, applied AI pipelines, and data systems.",
     images: ["/images/ashutosh-portrait.png"],
   },
   icons: {
@@ -80,12 +80,12 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="dark scroll-smooth">
+    <html lang="en" className="scroll-smooth">
       <head>
-        <meta name="theme-color" content="#0A0B0D" />
+        <meta name="theme-color" content="#FAF8F5" />
       </head>
       <body
-        className={`${jakarta.variable} ${inter.variable} ${jetbrainsMono.variable} font-sans antialiased bg-bg-primary text-brandText-primary selection:bg-accent/30 selection:text-white min-h-screen`}
+        className={`${jakarta.variable} ${inter.variable} ${jetbrainsMono.variable} font-sans antialiased bg-bg-paper text-brandText-primary selection:bg-accent/20 selection:text-brandText-primary min-h-screen`}
       >
         {children}
       </body>

@@ -1,148 +1,119 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Trophy, GraduationCap, Award, CheckCircle2, Star, Sparkles } from "lucide-react";
-import { EDUCATION, ACHIEVEMENTS, CERTIFICATIONS } from "@/lib/data";
+import { GraduationCap, Trophy, Award, Star } from "lucide-react";
+import { EDUCATION_ITEMS, ACHIEVEMENTS } from "@/lib/data";
 
 export default function Achievements() {
   return (
-    <section id="education" className="py-20 sm:py-32 px-4 sm:px-6 lg:px-8 border-b border-surface-border">
-      <div className="max-w-7xl mx-auto space-y-20 sm:space-y-24">
-        {/* Education Sub-Section */}
-        <div>
-          <div className="flex flex-col sm:flex-row sm:items-end justify-between mb-12 sm:mb-16 gap-4 border-b border-surface-border pb-6">
-            <div>
-              <div className="font-mono text-xs text-accent uppercase tracking-wider mb-2 flex items-center gap-2">
-                <GraduationCap className="w-4 h-4 text-accent" />
-                <span>Academic Credentials & Dual Degrees</span>
-              </div>
-              <h2 className="font-display font-extrabold text-2xl sm:text-3xl md:text-4xl text-white tracking-tight">
-                Education.
-              </h2>
-            </div>
-            <div className="font-mono text-xs text-brandText-muted">
-              [ 06 // TCET · IIT MADRAS · UNIV OF MUMBAI ]
-            </div>
+    <section className="py-20 sm:py-28 px-4 sm:px-6 lg:px-8 border-b border-[#E5E0D8] bg-[#F4EFEA]/30">
+      <div className="max-w-6xl mx-auto space-y-20">
+        {/* ========================================================
+            EDUCATION
+            ======================================================== */}
+        <div className="space-y-10">
+          <div>
+            <span className="text-xs font-semibold text-accent uppercase tracking-wider">
+              Academic Degrees
+            </span>
+            <h2 className="mt-1 font-display font-extrabold text-3xl sm:text-4xl text-brandText-primary tracking-tight">
+              Education.
+            </h2>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-5 sm:gap-6">
-            {EDUCATION.map((edu, idx) => (
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            {EDUCATION_ITEMS.map((edu, idx) => (
               <motion.div
-                key={edu.degree}
+                key={idx}
                 initial={{ opacity: 0, y: 16 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.4, delay: idx * 0.08 }}
-                className="bg-surface-card border border-surface-border p-5 sm:p-6 flex flex-col justify-between hover:border-surface-borderHover transition-all shadow-lg"
+                className="bg-white rounded-2xl border border-[#E5E0D8] p-6 shadow-sm hover:border-[#D1C7B7] transition-all flex flex-col justify-between"
               >
-                <div>
-                  <div className="flex items-center justify-between font-mono text-xs pb-3 mb-3 border-b border-surface-border">
-                    <span className="text-brandText-muted text-[11px]">{edu.period}</span>
-                    <span className="px-2 py-0.5 bg-accent/10 border border-accent/30 text-accent font-bold text-xs">
-                      {edu.scoreType} {edu.score}
+                <div className="space-y-3">
+                  <div className="flex items-center justify-between text-xs text-brandText-muted">
+                    <span className="font-semibold text-accent flex items-center gap-1">
+                      <GraduationCap className="w-4 h-4" />
+                      <span>{edu.scoreType}: {edu.score}</span>
                     </span>
+                    <span>{edu.period}</span>
                   </div>
 
-                  <h3 className="font-display font-bold text-base sm:text-lg md:text-xl text-white mb-1">
+                  <h3 className="font-display font-bold text-lg text-brandText-primary leading-snug">
                     {edu.degree}
                   </h3>
-                  <div className="text-accent text-xs font-medium mb-3">
+
+                  <div className="text-xs font-semibold text-brandText-muted">
                     {edu.institution}
                   </div>
-                  <p className="text-brandText-secondary text-xs leading-relaxed mb-4">
-                    {edu.description}
-                  </p>
+
+                  {edu.description && (
+                    <p className="text-xs text-brandText-secondary leading-relaxed pt-1">
+                      {edu.description}
+                    </p>
+                  )}
                 </div>
 
-                <div className="pt-3 border-t border-surface-border">
-                  <div className="font-mono text-[10px] text-brandText-muted uppercase mb-2">
-                    Focus Areas:
-                  </div>
-                  <div className="flex flex-wrap gap-1.5">
-                    {edu.focusAreas.map((f) => (
-                      <span
-                        key={f}
-                        className="px-2 py-0.5 bg-bg-primary text-[10px] font-mono text-brandText-primary border border-surface-border"
-                      >
-                        {f}
-                      </span>
-                    ))}
-                  </div>
+                <div className="mt-6 pt-4 border-t border-[#E5E0D8] flex flex-wrap gap-1.5">
+                  {edu.focusAreas.map((area) => (
+                    <span
+                      key={area}
+                      className="px-2 py-0.5 rounded-md bg-[#FAF8F5] border border-[#E5E0D8] text-[10px] text-brandText-muted font-medium"
+                    >
+                      {area}
+                    </span>
+                  ))}
                 </div>
               </motion.div>
             ))}
           </div>
         </div>
 
-        {/* Verified Achievements Sub-Section */}
-        <div>
-          <div className="flex flex-col sm:flex-row sm:items-end justify-between mb-10 sm:mb-12 gap-4 border-b border-surface-border pb-6">
-            <div>
-              <div className="font-mono text-xs text-accent uppercase tracking-wider mb-2 flex items-center gap-2">
-                <Trophy className="w-4 h-4 text-accent" />
-                <span>Competitions, Research Awards & Scores</span>
-              </div>
-              <h2 className="font-display font-extrabold text-2xl sm:text-3xl md:text-4xl text-white tracking-tight">
-                Honors & Achievements.
-              </h2>
-            </div>
-            <div className="font-mono text-xs text-brandText-muted">
-              [ VERIFIED MILESTONES ]
-            </div>
+        {/* ========================================================
+            HONORS & RECOGNITIONS
+            ======================================================== */}
+        <div className="space-y-10 pt-8 border-t border-[#E5E0D8]">
+          <div>
+            <span className="text-xs font-semibold text-accent uppercase tracking-wider">
+              Recognition
+            </span>
+            <h3 className="mt-1 font-display font-bold text-2xl sm:text-3xl text-brandText-primary tracking-tight">
+              Honors & Competitive Milestones.
+            </h3>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-5">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
             {ACHIEVEMENTS.map((item, idx) => (
               <motion.div
-                key={item.title}
+                key={idx}
                 initial={{ opacity: 0, y: 16 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                transition={{ duration: 0.4, delay: idx * 0.06 }}
-                className="p-5 sm:p-6 bg-surface-card border border-surface-border hover:border-accent/60 transition-all flex flex-col justify-between"
+                transition={{ duration: 0.35, delay: idx * 0.05 }}
+                className="bg-white rounded-2xl border border-[#E5E0D8] p-5 shadow-sm hover:border-[#D1C7B7] transition-all flex flex-col justify-between"
               >
                 <div>
-                  <div className="flex items-center justify-between font-mono text-xs mb-3 gap-2 flex-wrap">
-                    <span className="text-brandText-muted uppercase text-[10px]">
-                      {item.organization}
+                  <div className="flex items-center justify-between text-xs text-brandText-muted mb-2">
+                    <span className="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-md bg-accent/10 text-accent font-semibold text-xs">
+                      <Trophy className="w-3 h-3" />
+                      <span>{item.badgeText}</span>
                     </span>
-                    <span className="px-2 py-0.5 bg-accent text-white font-semibold text-[10px] sm:text-[11px]">
-                      {item.badgeText}
-                    </span>
+                    <span>{item.year}</span>
                   </div>
 
-                  <h3 className="font-display font-bold text-white text-sm sm:text-base mb-2">
+                  <h4 className="font-display font-bold text-base text-brandText-primary">
                     {item.title}
-                  </h3>
-                  <p className="text-brandText-secondary text-xs leading-relaxed">
+                  </h4>
+                  <div className="text-xs text-brandText-muted mt-0.5 font-medium">
+                    {item.organization}
+                  </div>
+
+                  <p className="mt-2.5 text-xs text-brandText-secondary leading-relaxed">
                     {item.details}
                   </p>
                 </div>
               </motion.div>
-            ))}
-          </div>
-        </div>
-
-        {/* Certifications Badges Bar */}
-        <div className="p-5 sm:p-8 bg-surface-card border border-surface-border">
-          <div className="flex items-center gap-2 font-mono text-xs text-accent uppercase tracking-wider mb-4 pb-3 border-b border-surface-border">
-            <Award className="w-4 h-4 text-accent shrink-0" />
-            <span>Verified Technical Certifications</span>
-          </div>
-
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-2.5 sm:gap-3 pt-1">
-            {CERTIFICATIONS.map((cert) => (
-              <div
-                key={cert.name}
-                className="p-3 bg-bg-primary border border-surface-border text-left"
-              >
-                <div className="font-display font-semibold text-xs text-white leading-snug">
-                  {cert.name}
-                </div>
-                <div className="font-mono text-[10px] text-accent mt-1">
-                  {cert.issuer}
-                </div>
-              </div>
             ))}
           </div>
         </div>
