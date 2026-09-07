@@ -27,7 +27,7 @@ export default function About() {
     {
       title: "Academic Research",
       description:
-        "Author of 3 published book chapters and conference papers in AI-assisted education (MULTICON-W Best Paper Award).",
+        "Author of 3 published book chapters and recipient of the Best Paper Award at MULTICON for research in AI in personalized learning.",
       icon: BookOpen,
     },
   ];

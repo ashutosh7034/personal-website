@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { GraduationCap, Trophy, Award, Star } from "lucide-react";
+import { GraduationCap, Trophy, Award, Star, BookOpen } from "lucide-react";
 import { EDUCATION_ITEMS, ACHIEVEMENTS } from "@/lib/data";
 
 export default function Achievements() {
@@ -79,7 +79,7 @@ export default function Achievements() {
               Recognition
             </span>
             <h3 className="mt-1 font-display font-bold text-2xl sm:text-3xl text-brandText-primary tracking-tight">
-              Honors & Competitive Milestones.
+              Honors & Milestones.
             </h3>
           </div>
 
@@ -96,7 +96,11 @@ export default function Achievements() {
                 <div>
                   <div className="flex items-center justify-between text-xs text-brandText-muted mb-2">
                     <span className="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-md bg-accent/10 text-accent font-semibold text-xs">
-                      <Trophy className="w-3 h-3" />
+                      {item.category === "academic" ? (
+                        <Award className="w-3 h-3" />
+                      ) : (
+                        <Trophy className="w-3 h-3" />
+                      )}
                       <span>{item.badgeText}</span>
                     </span>
                     <span>{item.year}</span>

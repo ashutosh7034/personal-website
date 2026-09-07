@@ -82,14 +82,44 @@ export interface EducationItem {
   focusAreas: string[];
 }
 
-export interface PublicationItem {
-  title: string;
-  year: string;
+export interface BookChapterItem {
+  id: string;
+  chapterTitle: string;
+  bookTitle: string;
   authors: string;
-  venue?: string;
+  chapterNumber: number;
+  isbn: string;
+  publicationDate: string;
   summary: string;
-  award?: string;
   tags: string[];
+}
+
+export interface ResearchMetric {
+  value: string;
+  label: string;
+  detail: string;
+}
+
+export interface FeaturedResearchPaper {
+  id: string;
+  title: string;
+  authors: string[];
+  affiliation: string;
+  award: string;
+  conference: string;
+  researchType: string;
+  sampleSize: string;
+  abstract: string;
+  researchQuestion: string;
+  whyItMatters: string;
+  methodology: string;
+  keyMetrics: ResearchMetric[];
+  literatureVsSurvey: string;
+  challenges: string[];
+  limitations: string;
+  conclusion: string;
+  tags: string[];
+  pdfUrl?: string;
 }
 
 export interface AchievementItem {

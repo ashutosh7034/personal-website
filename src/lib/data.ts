@@ -4,7 +4,8 @@ import {
   SkillCategory,
   ExperienceItem,
   EducationItem,
-  PublicationItem,
+  BookChapterItem,
+  FeaturedResearchPaper,
   AchievementItem,
   TechProjectMapping,
 } from "./types";
@@ -192,7 +193,7 @@ export const FEATURED_PROJECTS: Project[] = [
 ];
 
 // ========================================================
-// COMPLETE AUDITED GITHUB PROJECT ARCHIVE (ALL PROJECTS)
+// COMPLETE AUDITED GITHUB PROJECT ARCHIVE
 // ========================================================
 export const PROJECT_ARCHIVE: ArchiveProject[] = [
   {
@@ -414,7 +415,7 @@ export const PROJECT_ARCHIVE: ArchiveProject[] = [
 ];
 
 // ========================================================
-// TECHNOLOGY TO PROJECT MAPPINGS (FOR PROJECT MAPPING VIEW)
+// TECHNOLOGY TO PROJECT MAPPINGS
 // ========================================================
 export const TECH_PROJECT_MAPPINGS: TechProjectMapping[] = [
   {
@@ -636,34 +637,113 @@ export const EXPERIENCE_ITEMS: ExperienceItem[] = [
   },
 ];
 
-export const PUBLICATIONS: PublicationItem[] = [
+// ========================================================
+// 01: FEATURED RESEARCH PAPER (MULTICON BEST PAPER)
+// ========================================================
+export const FEATURED_RESEARCH_PAPER: FeaturedResearchPaper = {
+  id: "multicon-ai-personalized-learning",
+  title: "Artificial Intelligence in Personalized Online Learning: A Study of Student Outcomes",
+  authors: [
+    "Ashutosh Pandey",
+    "Jaynish Mandal",
+    "Aakash Pandey",
+    "Manu Maurya",
+  ],
+  affiliation: "Department of Computer Application, Thakur College of Engineering and Technology, Mumbai",
+  award: "Best Paper Award — MULTICON",
+  conference: "MULTICON",
+  researchType: "Narrative Literature Review + Primary Student Survey",
+  sampleSize: "179 student participants",
+  abstract:
+    "This paper investigates whether AI-powered personalized online learning improves student outcomes by analyzing academic performance, adoption rates, feedback utility, and the risks of student over-reliance. Combining a narrative literature review with an empirical primary survey of 179 higher education students in Mumbai, the study highlights critical tensions between theoretical personalization benefits and real-world student learning behaviors.",
+  researchQuestion:
+    "Does AI-powered personalized online learning directly improve student academic outcomes, and what behavioral challenges arise from continuous AI tool dependence?",
+  whyItMatters:
+    "As generative AI and adaptive learning platforms become ubiquitous in higher education, understanding whether students experience true cognitive gains versus surface-level task completion is essential for responsible institutional adoption.",
+  methodology:
+    "Dual-track research design comprising: (1) A narrative review of published academic literature on adaptive AI frameworks; and (2) A primary quantitative survey of 179 undergraduate and postgraduate students across Mumbai colleges evaluating usage frequency, perceived grade impact, feedback quality, and cognitive independence.",
+  keyMetrics: [
+    {
+      value: "96.6%",
+      label: "AI Tool Adoption",
+      detail: "Surveyed students actively using AI-powered tools in their daily academic coursework.",
+    },
+    {
+      value: "48.3%",
+      label: "Daily Active Usage",
+      detail: "Students reporting daily reliance on AI tools for study and homework assistance.",
+    },
+    {
+      value: "44.8%",
+      label: "Over-Dependence Concern",
+      detail: "Identified over-reliance on automated AI outputs as a primary academic hazard.",
+    },
+    {
+      value: "37.9%",
+      label: "Critical Thinking Risk",
+      detail: "Agreed or strongly agreed that unguided AI usage harms independent problem-solving.",
+    },
+  ],
+  literatureVsSurvey:
+    "While existing published literature widely reports positive correlation between AI personalization and student achievement, our primary survey of 179 students reveals a more divided reality: high adoption and daily utility coexist with skepticism regarding measurable grade improvements, underscoring that speed of completion does not equate to mastery.",
+  challenges: [
+    "Cognitive over-reliance and erosion of independent problem-solving skills",
+    "Digital divide in subscription-based advanced model access",
+    "Data privacy and academic integrity ambiguity in continuous evaluation",
+    "Absence of structured educator training on pedagogical AI integration",
+  ],
+  limitations:
+    "The survey sample (n = 179) was localized primarily to students in higher education institutions in Mumbai. Results capture regional collegiate perspectives rather than universal student outcomes.",
+  conclusion:
+    "AI-driven personalization is most effective when architected as a collaborative aid empowering educators, rather than an unguided standalone replacement for teacher-guided inquiry.",
+  tags: [
+    "AI in Education",
+    "Personalized Learning",
+    "Empirical Survey (n=179)",
+    "Learning Analytics",
+    "Human-AI Collaboration",
+  ],
+};
+
+// ========================================================
+// 02: VERIFIED PUBLISHED BOOK CHAPTERS (3 CHAPTERS)
+// ========================================================
+export const BOOK_CHAPTERS: BookChapterItem[] = [
   {
-    title: "AI-Driven Adaptive Learning Frameworks in Higher Education",
-    year: "2026",
-    authors: "Ashutosh Pandey, et al.",
-    venue: "MULTICON-W 2026 (International Conference)",
+    id: "chapter-01-higher-ed",
+    chapterTitle: "The Role of Artificial Intelligence and Automation in Transforming Higher Education: An Interdisciplinary Perspective",
+    bookTitle: "Integrated Perspectives: Bridging All Disciplines",
+    authors: "Ashutosh Pandey",
+    chapterNumber: 20,
+    isbn: "978-93-5759-014-3",
+    publicationDate: "March 2026",
     summary:
-      "Investigates the integration of retrieval-augmented generation and adaptive feedback loops in university curricula to improve individualized student outcomes.",
-    award: "Best Paper Award @ MULTICON-W 2026",
-    tags: ["Artificial Intelligence", "Education Technology", "RAG", "Adaptive Systems"],
+      "Explores structural transformations in tertiary education resulting from autonomous automation, algorithmic curriculum pacing, and interdisciplinary institutional technology integration.",
+    tags: ["Higher Education", "Automation", "Interdisciplinary Research"],
   },
   {
-    title: "Predictive Analytics and Student Track Allocation Systems",
-    year: "2026",
-    authors: "Ashutosh Pandey, et al.",
-    venue: "Published Book Chapter — Emerging Trends in Computational Sciences",
+    id: "chapter-02-reshaping-learning",
+    chapterTitle: "Artificial Intelligence in Education - Reshaping Learning in the Digital Age",
+    bookTitle: "Synergy of Knowledge: An Interdisciplinary Approach",
+    authors: "Ashutosh Pandey, Jaynish Kumar Mandal",
+    chapterNumber: 59,
+    isbn: "978-93-5782-757-7",
+    publicationDate: "April 2026",
     summary:
-      "Details relational workflow architectures and algorithmic optimization techniques for handling complex departmental elective allocations across large student cohorts.",
-    tags: ["Database Systems", "Optimization", "Enterprise Architecture"],
+      "Analyzes digital-era pedagogical models, continuous student feedback loops, and how machine learning algorithms adapt instructional pacing to individual learner needs.",
+    tags: ["AI in Education", "Digital Learning", "Adaptive Pedagogy"],
   },
   {
-    title: "Conversational Information Retrieval in Academic Document Archives",
-    year: "2026",
-    authors: "Ashutosh Pandey, et al.",
-    venue: "Published Book Chapter — Applied AI & Intelligent Computing",
+    id: "chapter-03-autonomous-agents",
+    chapterTitle: "Human-AI Collaboration in the Era of Autonomous AI Agents: Opportunities, Challenges and Future Directions",
+    bookTitle: "Confluence of Disciplines: Contemporary Interdisciplinary Research",
+    authors: "Ashutosh Pandey, Jaynish Kumar Mandal",
+    chapterNumber: 125,
+    isbn: "978-93-5933-953-5",
+    publicationDate: "August 2026",
     summary:
-      "A comprehensive review of dense vector indexing (FAISS), recursive semantic chunking strategies, and hallucination reduction in specialized technical archives.",
-    tags: ["Information Retrieval", "Vector Embeddings", "FAISS", "LangChain"],
+      "Investigates dynamic human-agent collaboration paradigms, ethical agency boundaries, and decision-support dynamics in autonomous multi-agent environments.",
+    tags: ["Human-AI Collaboration", "Autonomous Agents", "Multi-Agent Systems"],
   },
 ];
 
@@ -702,12 +782,13 @@ export const EDUCATION_ITEMS: EducationItem[] = [
 
 export const ACHIEVEMENTS: AchievementItem[] = [
   {
-    title: "Best Paper Award",
-    organization: "MULTICON-W 2026 International Conference",
+    title: "Best Paper Award — MULTICON",
+    organization: "MULTICON Conference",
     year: "2026",
     category: "academic",
-    badgeText: "Best Paper",
-    details: "Awarded top research paper honors for work on AI-driven academic support systems.",
+    badgeText: "Best Paper Award",
+    details:
+      'Awarded Best Paper for "Artificial Intelligence in Personalized Online Learning: A Study of Student Outcomes" (Authors: Ashutosh Pandey, Jaynish Mandal, Aakash Pandey, Manu Maurya).',
   },
   {
     title: "Finalist — Mumbai Hacks",
