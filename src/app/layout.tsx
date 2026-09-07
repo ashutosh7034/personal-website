@@ -1,0 +1,94 @@
+import type { Metadata } from "next";
+import { Plus_Jakarta_Sans, Inter, JetBrains_Mono } from "next/font/google";
+import "./globals.css";
+
+const jakarta = Plus_Jakarta_Sans({
+  subsets: ["latin"],
+  variable: "--font-display",
+  weight: ["500", "600", "700", "800"],
+  display: "swap",
+});
+
+const inter = Inter({
+  subsets: ["latin"],
+  variable: "--font-sans",
+  weight: ["300", "400", "500", "600"],
+  display: "swap",
+});
+
+const jetbrainsMono = JetBrains_Mono({
+  subsets: ["latin"],
+  variable: "--font-mono",
+  weight: ["400", "500", "600"],
+  display: "swap",
+});
+
+export const metadata: Metadata = {
+  metadataBase: new URL("https://ashutoshpandey34.netlify.app"),
+  title: "Ashutosh Pandey — Software Developer",
+  description:
+    "Software Developer specializing in Full-Stack systems, Backend architecture, SQL/NoSQL databases, and Applied AI (RAG pipelines, LangChain, FAISS). MCA @ TCET & BS Data Science @ IIT Madras.",
+  keywords: [
+    "Ashutosh Pandey",
+    "Software Developer",
+    "Full-Stack Developer",
+    "Applied AI",
+    "RAG",
+    "LangChain",
+    "FAISS",
+    "Python",
+    "Java",
+    "Next.js",
+    "Mumbai Developer",
+    "TCET",
+    "IIT Madras",
+  ],
+  authors: [{ name: "Ashutosh Pandey", url: "https://ashutoshpandey34.netlify.app" }],
+  creator: "Ashutosh Pandey",
+  openGraph: {
+    type: "website",
+    locale: "en_US",
+    url: "https://ashutoshpandey34.netlify.app",
+    title: "Ashutosh Pandey — Software Developer",
+    description:
+      "I build software that turns ideas into useful systems. Full-Stack, Backend, and Applied AI.",
+    siteName: "Ashutosh Pandey Portfolio",
+    images: [
+      {
+        url: "/images/ashutosh-portrait.png",
+        width: 1102,
+        height: 1427,
+        alt: "Ashutosh Pandey — Software Developer",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Ashutosh Pandey — Software Developer",
+    description:
+      "Software Developer specializing in Full-Stack development and Applied AI (RAG, LangChain, FAISS).",
+    images: ["/images/ashutosh-portrait.png"],
+  },
+  icons: {
+    icon: "/favicon.ico",
+  },
+};
+
+export default function RootLayout({
+  children,
+}: Readonly<{
+  children: React.ReactNode;
+}>) {
+  return (
+    <html lang="en" className="dark scroll-smooth">
+      <head>
+        <meta name="theme-color" content="#0A0B0D" />
+      </head>
+      <body
+        className={`${jakarta.variable} ${inter.variable} ${jetbrainsMono.variable} font-sans antialiased bg-bg-primary text-brandText-primary selection:bg-accent/30 selection:text-white min-h-screen`}
+      >
+        {children}
+      </body>
+    </html>
+  );
+}
