@@ -43,6 +43,12 @@ export interface ArchiveProject {
   highlight?: string;
 }
 
+export interface TechProjectMapping {
+  tech: string;
+  category: "languages" | "frameworks" | "ai" | "databases" | "mobile";
+  projectIds: string[];
+}
+
 export interface SkillCategory {
   title: string;
   icon: string;

@@ -2,6 +2,7 @@ import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
 import About from "@/components/About";
 import Projects from "@/components/Projects";
+import ProjectMapping from "@/components/ProjectMapping";
 import Research from "@/components/Research";
 import SkillEcosystem from "@/components/SkillEcosystem";
 import Experience from "@/components/Experience";
@@ -16,6 +17,7 @@ export default function Home() {
       <Hero />
       <About />
       <Projects />
+      <ProjectMapping />
       <Research />
       <SkillEcosystem />
       <Experience />

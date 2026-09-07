@@ -6,6 +6,7 @@ import {
   EducationItem,
   PublicationItem,
   AchievementItem,
+  TechProjectMapping,
 } from "./types";
 
 export const PERSONAL_INFO = {
@@ -28,7 +29,7 @@ export const PERSONAL_INFO = {
 };
 
 // ========================================================
-// 3 BEST FEATURED PROJECTS (FLAGSHIP SYSTEMS)
+// TOP 3 BEST FLAGSHIP PROJECTS (HOMEPAGE HIGHLIGHTS)
 // ========================================================
 export const FEATURED_PROJECTS: Project[] = [
   {
@@ -36,8 +37,8 @@ export const FEATURED_PROJECTS: Project[] = [
     number: "01",
     title: "OceanGuard AI",
     shortTitle: "OceanGuard AI",
-    subtitle: "Maritime Oil Spill Attribution & Telemetry Tracking",
-    category: "Geospatial Data Engineering & Vision",
+    subtitle: "Maritime Oil Spill Attribution",
+    category: "Geospatial Telemetry & Vision",
     archiveCategory: "hackathon",
     year: "2026",
     duration: "Aug 2026 – Sep 2026",
@@ -58,7 +59,7 @@ export const FEATURED_PROJECTS: Project[] = [
       {
         step: "01",
         label: "SAR Slick Segmentation",
-        description: "Adaptive thresholding and morphological filtering on SAR imagery to isolate oil slick contours.",
+        description: "Adaptive thresholding and morphological filtering to isolate oil slick contours.",
       },
       {
         step: "02",
@@ -81,16 +82,16 @@ export const FEATURED_PROJECTS: Project[] = [
         description: "Output ranked vessel logs categorized into high, medium, and low risk tiers.",
       },
     ],
-    techStack: ["Python", "FastAPI", "OpenCV", "Pandas", "NumPy", "AIS Data Engineering", "Geodesics"],
+    techStack: ["Python", "FastAPI", "OpenCV", "Pandas", "NumPy", "AIS Telemetry", "Geodesics"],
     githubUrl: "https://github.com/ashutosh7034/Academic_chat_bot",
     featured: true,
   },
   {
     id: "rag-academic-assistant",
     number: "02",
-    title: "RAG-Based AI Academic Assistant",
+    title: "RAG Academic Assistant",
     shortTitle: "RAG Assistant",
-    subtitle: "Conversational Document Retrieval & Grounded Generation",
+    subtitle: "Conversational Document Retrieval",
     category: "Applied AI & Vector Search",
     archiveCategory: "ai",
     year: "2026",
@@ -111,8 +112,8 @@ export const FEATURED_PROJECTS: Project[] = [
     pipelineSteps: [
       {
         step: "01",
-        label: "Document Ingestion",
-        description: "Extract text from college PDFs and circulars with structured metadata tagging.",
+        label: "Document Parsing",
+        description: "Extract text from college PDFs and circulars with metadata tagging.",
       },
       {
         step: "02",
@@ -144,14 +145,14 @@ export const FEATURED_PROJECTS: Project[] = [
     number: "03",
     title: "TCET Specialization Tracker",
     shortTitle: "Specialization Tracker",
-    subtitle: "Enterprise Departmental Workflow & Track Allocation Portal",
+    subtitle: "Academic Workflow & Allocation Portal",
     category: "Full-Stack Enterprise Systems",
     archiveCategory: "fullstack",
     year: "2026",
     duration: "Apr 2026 – Jun 2026",
     badge: "Institutional System",
     description:
-      "A database-driven institutional workflow portal managing student specialization track selection, course allocations, and departmental approvals for 150+ students.",
+      "A database-driven institutional workflow portal managing student specialization track selection, course allocations, and departmental approvals.",
     problem:
       "Managing student elective preferences across 150+ candidates using spreadsheets led to data conflicts, missing records, and slow manual approval loops.",
     built:
@@ -191,7 +192,7 @@ export const FEATURED_PROJECTS: Project[] = [
 ];
 
 // ========================================================
-// COMPLETE PROJECT ARCHIVE (EXTRACTED FROM GITHUB)
+// COMPLETE AUDITED GITHUB PROJECT ARCHIVE (ALL PROJECTS)
 // ========================================================
 export const PROJECT_ARCHIVE: ArchiveProject[] = [
   {
@@ -200,7 +201,7 @@ export const PROJECT_ARCHIVE: ArchiveProject[] = [
     category: "Geospatial Data & Computer Vision",
     archiveCategory: "hackathon",
     year: "2026",
-    description: "Marine oil spill attribution prototype matching SAR satellite contours with historical AIS vessel trajectories via Haversine scoring.",
+    description: "Marine oil spill attribution prototype matching SAR satellite contours with AIS vessel trajectories.",
     techStack: ["Python", "FastAPI", "OpenCV", "Pandas", "Geodesics"],
     githubUrl: "https://github.com/ashutosh7034/Academic_chat_bot",
     highlight: "IIT Madras Internal Hackathon Selection",
@@ -211,10 +212,10 @@ export const PROJECT_ARCHIVE: ArchiveProject[] = [
     category: "Applied AI & Vector Search",
     archiveCategory: "ai",
     year: "2026",
-    description: "Document retrieval conversational assistant using LangChain, recursive semantic chunking, and FAISS vector embeddings.",
+    description: "Document retrieval conversational assistant using LangChain and FAISS vector embeddings.",
     techStack: ["Python", "LangChain", "FAISS", "LLM APIs"],
     githubUrl: "https://github.com/ashutosh7034/Academic_chat_bot",
-    highlight: "Research Prototype",
+    highlight: "Published Research Prototype",
   },
   {
     id: "tcet-specialization",
@@ -222,467 +223,293 @@ export const PROJECT_ARCHIVE: ArchiveProject[] = [
     category: "Enterprise Workflow & Database",
     archiveCategory: "fullstack",
     year: "2026",
-    description: "Institutional academic elective and specialization track management system with role-based access for 150+ students.",
+    description: "Academic elective and specialization track management system with role-based access control.",
     techStack: ["PHP", "MySQL", "JavaScript", "AJAX"],
     githubUrl: "https://github.com/ashutosh7034/Academic_chat_bot",
     highlight: "Institutional Portal",
   },
   {
     id: "quickserve-platform",
-    title: "QuickServe Local Services Search Engine",
-    category: "Full-Stack Web App",
+    title: "QuickServe — Local Services Search Engine",
+    category: "Full-Stack Web & Geospatial",
     archiveCategory: "fullstack",
     year: "2025",
-    description: "Hyperlocal service discovery marketplace featuring MongoDB geospatial $near radius queries, provider verification, and JWT auth.",
-    techStack: ["Node.js", "Express.js", "MongoDB", "JWT", "REST APIs"],
+    description: "Hyperlocal service marketplace with MongoDB geospatial radius search, provider verifications, and JWT auth.",
+    techStack: ["Node.js", "Express.js", "MongoDB", "REST APIs", "JWT"],
     githubUrl: "https://github.com/ashutosh7034/Local-Service-Search-Engine",
+    highlight: "Geospatial Indexing",
   },
   {
     id: "quizai-flutter",
-    title: "QuizAI Mobile App",
-    category: "Cross-Platform Mobile",
+    title: "QuizAI — Adaptive Learning App",
+    category: "Cross-Platform Mobile Application",
     archiveCategory: "mobile",
     year: "2025",
-    description: "Adaptive computer science quiz mobile application with Cloud Firestore real-time synchronization, timers, and offline caching.",
+    description: "Cross-platform mobile quiz application with Cloud Firestore real-time synchronization and topic mastery tracking.",
     techStack: ["Flutter", "Dart", "Firebase Firestore", "Provider"],
     githubUrl: "https://github.com/ashutosh7034/QuizAI",
+    highlight: "Real-time State Sync",
   },
   {
     id: "jobportal-yt",
-    title: "Full-Stack Recruitment Portal",
+    title: "Full-Stack Job Portal System",
     category: "Full-Stack Systems",
     archiveCategory: "fullstack",
     year: "2025",
-    description: "Recruitment portal with applicant tracking workflows, recruiter job postings, resume uploads, and role auth middleware.",
-    techStack: ["Node.js", "Express.js", "MongoDB", "React"],
+    description: "Recruitment portal with applicant tracking, employer job postings, role-based auth middleware, and resume uploads.",
+    techStack: ["Node.js", "Express.js", "MongoDB", "React", "JWT"],
     githubUrl: "https://github.com/ashutosh7034/jobportal-yt",
   },
   {
     id: "healthcare-crm",
-    title: "Healthcare Professional (HCP) CRM",
+    title: "AI-First Healthcare CRM (HCP Module)",
     category: "Backend & Systems",
     archiveCategory: "backend",
     year: "2025",
-    description: "Healthcare CRM tracking medical interactions, doctor scheduling, compliance logs, and patient communication pipelines.",
-    techStack: ["Node.js", "Express.js", "REST APIs", "JavaScript"],
+    description: "Healthcare professional CRM tracking medical interactions, doctor scheduling, and compliance audit logs.",
+    techStack: ["Node.js", "Express.js", "REST APIs", "MongoDB"],
     githubUrl: "https://github.com/ashutosh7034/AI-First-Customer-Relationship-Management",
+  },
+  {
+    id: "age-gender-detection",
+    title: "Gender & Age Estimation AI",
+    category: "Applied AI / Computer Vision",
+    archiveCategory: "ai",
+    year: "2025",
+    description: "Deep learning facial attribute classification using OpenCV Caffe models and convolutional neural networks.",
+    techStack: ["Python", "OpenCV", "Deep Learning", "CNN"],
+    githubUrl: "https://github.com/ashutosh7034/gender-age-detection",
   },
   {
     id: "mahabooks-portal",
     title: "Maharashtra State Books Portal",
-    category: "Frontend Web",
+    category: "Frontend Web & Accessibility",
     archiveCategory: "fullstack",
     year: "2025",
-    description: "Digital textbook repository built to improve curriculum accessibility for Maharashtra State Board students.",
-    techStack: ["HTML5", "CSS3", "JavaScript"],
+    description: "Educational portal hosting Maharashtra State Board textbooks to improve free digital curriculum accessibility.",
+    techStack: ["HTML5", "CSS3", "JavaScript", "Netlify"],
     githubUrl: "https://github.com/ashutosh7034/Mahabooks-",
     liveUrl: "https://maharashtrabookpdf.netlify.app",
   },
   {
     id: "oneconnect-superapp",
-    title: "OneConnect Super-App Dashboard",
-    category: "Enterprise Backend",
+    title: "OneConnect Super-App",
+    category: "Enterprise Java Architecture",
     archiveCategory: "backend",
-    year: "2025",
-    description: "Enterprise Java web application with servlet-based controller pipelines, session management, and modular service tiles.",
-    techStack: ["Java", "Java Servlets", "JSP", "MySQL"],
+    year: "2024",
+    description: "Unified web services dashboard built with Java Servlets, JSP, and relational MySQL database backend.",
+    techStack: ["Java", "Servlets", "JSP", "MySQL", "Apache Tomcat"],
     githubUrl: "https://github.com/ashutosh7034/OneConnect---Web-Application",
   },
   {
-    id: "hyperlocal-marketplace",
-    title: "Hyperlocal Multi-Vendor Delivery System",
-    category: "Full-Stack Systems",
+    id: "hyperlocal-delivery",
+    title: "Hyperlocal Multi-Vendor Delivery Marketplace",
+    category: "Full-Stack E-Commerce",
     archiveCategory: "fullstack",
-    year: "2025",
-    description: "Multi-vendor catalog and ordering system with real-time merchant inventory updates and relational order states.",
+    year: "2024",
+    description: "Multi-vendor food and grocery delivery engine with live cart calculations and vendor order management.",
     techStack: ["React", "Node.js", "Express.js", "MySQL"],
     githubUrl: "https://github.com/ashutosh7034/Hyperlocal-Delivery-Marketplace",
   },
   {
-    id: "zoho-bulk-mailer",
+    id: "zoho-personalized-mailer",
     title: "Zoho Personalized Bulk Email Dispatcher",
-    category: "Backend & Automation",
+    category: "CLI & Backend Automation",
     archiveCategory: "backend",
-    year: "2025",
-    description: "CLI batch email automation tool utilizing custom SMTP sockets, rate limiting, and template personalization tags.",
-    techStack: ["PHP", "SMTP", "CLI Automation"],
+    year: "2024",
+    description: "Automated CLI tool for personalized transactional outreach using SMTP and Zoho Mail servers.",
+    techStack: ["PHP", "CLI", "SMTP", "RPA Automation"],
     githubUrl: "https://github.com/ashutosh7034/zoho-personalized-bulk-mailer",
   },
   {
-    id: "age-gender-detection",
-    title: "Deep Learning Age & Gender Detection",
-    category: "Applied AI / Computer Vision",
-    archiveCategory: "ai",
-    year: "2025",
-    description: "Computer vision pipeline predicting age group and gender classification from video feeds using OpenCV and CNN models.",
-    techStack: ["Python", "OpenCV", "TensorFlow", "Keras"],
-    githubUrl: "https://github.com/ashutosh7034/gender-age-detection",
-  },
-  {
-    id: "lms-portal",
+    id: "learning-management-system",
     title: "Learning Management System (LMS)",
     category: "Academic & Institutional",
     archiveCategory: "academic",
     year: "2024",
-    description: "Role-based course management portal supporting student assignments, grading rubrics, and syllabus tracking.",
-    techStack: ["PHP", "MySQL", "JavaScript", "HTML/CSS"],
+    description: "Modular LMS platform for course material distribution, assignment submissions, and student grading.",
+    techStack: ["PHP", "MySQL", "HTML5/CSS3", "JavaScript"],
     githubUrl: "https://github.com/ashutosh7034/learning_management_system",
   },
   {
-    id: "smart-library-portal",
+    id: "smart-digital-library",
     title: "Smart Digital Library Portal",
     category: "Academic & Institutional",
     archiveCategory: "academic",
     year: "2024",
-    description: "Institutional library book cataloging and automated fine-calculation system with relational database schemas.",
-    techStack: ["PHP", "MySQL", "Bootstrap"],
+    description: "Library book cataloging, barcode tracking, borrowing lifecycle, and overdue penalty system.",
+    techStack: ["PHP", "MySQL", "JavaScript", "Bootstrap"],
     githubUrl: "https://github.com/ashutosh7034/Smart-Digital-Library-Portal",
   },
   {
-    id: "tcet-nep-saarthi",
-    title: "TCET NEP Saarthi Outreach Portal",
-    category: "Academic & Institutional",
+    id: "tcet-nep-saarthi-portal",
+    title: "TCET NEP Saarthi Outreach Website",
+    category: "Institutional Portal",
     archiveCategory: "academic",
     year: "2026",
-    description: "Official student ambassador outreach website for National Education Policy implementation at TCET.",
-    techStack: ["HTML5", "CSS3", "JavaScript"],
+    description: "Official institutional web platform promoting National Education Policy student initiatives and academic events.",
+    techStack: ["HTML5", "CSS3", "JavaScript", "UI/UX"],
     githubUrl: "https://github.com/ashutosh7034/TCET_Nep_Saarthi_website",
   },
   {
-    id: "curfew-epass",
+    id: "curfew-epass-system",
     title: "Curfew E-Pass Management System",
-    category: "Full-Stack Systems",
+    category: "Workflow & Governance",
     archiveCategory: "fullstack",
     year: "2024",
-    description: "Administrative verification portal managing digital emergency travel permits with document upload verification.",
-    techStack: ["PHP", "MySQL", "JavaScript"],
+    description: "Emergency movement authorization system with applicant document verification and QR pass generation.",
+    techStack: ["PHP", "MySQL", "JavaScript", "QR APIs"],
     githubUrl: "https://github.com/ashutosh7034/Curfew-E-pass-Management-System",
   },
   {
-    id: "security-guard-hiring",
-    title: "Security Guard Hiring Management System",
-    category: "Full-Stack Systems",
+    id: "online-security-guard-system",
+    title: "Online Security Guard Hiring System",
+    category: "Service Booking Platform",
     archiveCategory: "fullstack",
     year: "2024",
-    description: "Client booking portal for on-demand security personnel recruitment, duty scheduling, and invoicing.",
-    techStack: ["PHP", "MySQL", "JavaScript"],
+    description: "Security personnel allocation portal with shift scheduling, rate calculation, and client contract management.",
+    techStack: ["PHP", "MySQL", "HTML/CSS", "JavaScript"],
     githubUrl: "https://github.com/ashutosh7034/Online-Security-Guard-Hiring-System",
   },
   {
-    id: "bookmyturf",
-    title: "BookMyTurf Slot Booking Engine",
-    category: "Frontend & Web",
+    id: "bookmyturf-app",
+    title: "BookMyTurf Slot Booking System",
+    category: "Web Application",
     archiveCategory: "fullstack",
     year: "2024",
-    description: "Interactive sports turf reservation web interface with real-time hourly slot selection and date pickers.",
-    techStack: ["JavaScript", "HTML5", "CSS3"],
+    description: "Sports turf slot reservation platform with interactive calendar grids and automated confirmation receipts.",
+    techStack: ["JavaScript", "HTML5", "CSS3", "Local Storage"],
     githubUrl: "https://github.com/ashutosh7034/BookMyTurf",
   },
   {
     id: "pasteboard-cpp",
     title: "PasteBoard Clipboard Utility",
-    category: "Systems & Utilities",
+    category: "Systems Programming",
     archiveCategory: "backend",
     year: "2024",
-    description: "Lightweight C++ desktop utility for managing multi-entry clipboard history and fast buffer search.",
-    techStack: ["C++", "Systems Programming"],
+    description: "Lightweight cross-application clipboard history manager with quick keyboard shortcuts.",
+    techStack: ["C++", "Data Structures", "Memory Management"],
     githubUrl: "https://github.com/ashutosh7034/PasteBoard",
   },
   {
+    id: "tourism-management",
+    title: "Tourism Management System",
+    category: "Frontend Web Application",
+    archiveCategory: "fullstack",
+    year: "2024",
+    description: "Travel package catalog with itinerary planning and tour booking inquiry workflows.",
+    techStack: ["HTML5", "CSS3", "JavaScript"],
+    githubUrl: "https://github.com/ashutosh7034/Tourism-Management-System",
+  },
+  {
     id: "ifsc-finder",
-    title: "IFSC Code & Bank Branch Finder",
-    category: "Web & Utilities",
-    archiveCategory: "fullstack",
-    year: "2024",
-    description: "Banking API integration utility resolving branch addresses, MICR codes, and clearing locations.",
-    techStack: ["JavaScript", "REST APIs", "CSS3"],
-    githubUrl: "https://github.com/ashutosh7034/IFSC-Code-Finder-Project",
-  },
-  {
-    id: "google-form-automation",
-    title: "Google Form Automation Tool",
-    category: "Scripting & Automation",
-    archiveCategory: "ai",
-    year: "2024",
-    description: "Python automation script parsing tabular CSV datasets and dispatching programmatic form responses.",
-    techStack: ["Python", "Automation", "Selenium"],
-    githubUrl: "https://github.com/ashutosh7034/Google-Form-Automation-",
-  },
-  {
-    id: "build-audi-customizer",
-    title: "Dynamic Vehicle Visual Customizer",
-    category: "Interactive Frontend",
-    archiveCategory: "fullstack",
-    year: "2024",
-    description: "Dynamic DOM-based interactive configuration interface for visual styling and accessory selection.",
-    techStack: ["JavaScript", "CSS3", "DOM APIs"],
-    githubUrl: "https://github.com/ashutosh7034/Build-Your-Own-Audi",
-  },
-  {
-    id: "ip-assignment-oop",
-    title: "IP Assignment OOP Systems Design",
-    category: "Academic & Systems",
+    title: "IFSC Code Finder Utility",
+    category: "API & Utility",
     archiveCategory: "backend",
     year: "2024",
-    description: "Object-oriented software engineering assignment implementing polymorphic models and design patterns in Java.",
-    techStack: ["Java", "OOP", "Data Structures"],
-    githubUrl: "https://github.com/ashutosh7034/IP_Assignment",
+    description: "Banking branch locator fetching bank names, branch addresses, and RTGS codes via public banking APIs.",
+    techStack: ["JavaScript", "REST APIs", "JSON"],
+    githubUrl: "https://github.com/ashutosh7034/IFSC-Code-Finder-Project",
   },
 ];
 
 // ========================================================
-// SKILL TO PROJECT CONNECTOR MAP (INTERACTIVE MAPPING)
+// TECHNOLOGY TO PROJECT MAPPINGS (FOR PROJECT MAPPING VIEW)
 // ========================================================
-export interface SkillProjectMapping {
-  skillName: string;
-  category: string;
-  projects: {
-    title: string;
-    description: string;
-    roleOrHighlight: string;
-    link?: string;
-  }[];
-}
-
-export const SKILL_PROJECT_MAPPINGS: Record<string, SkillProjectMapping> = {
-  Python: {
-    skillName: "Python",
-    category: "Languages & Applied AI",
-    projects: [
-      {
-        title: "OceanGuard AI (SIH26143 Prototype)",
-        description: "Built the AIS historical data ingestion pipeline, geodesic Haversine distance decay matrix, and FastAPI backend.",
-        roleOrHighlight: "AIS & Data Engineering",
-        link: "#projects",
-      },
-      {
-        title: "RAG Academic Assistant",
-        description: "Engineered recursive semantic chunking, vector embedding generation, and FAISS indexing with LangChain.",
-        roleOrHighlight: "Applied AI Pipeline",
-        link: "#projects",
-      },
-      {
-        title: "Deep Learning Age & Gender Detection",
-        description: "Implemented convolutional neural network models and OpenCV image preprocessing pipelines.",
-        roleOrHighlight: "Computer Vision",
-      },
-      {
-        title: "Google Form Automation Tool",
-        description: "Automated tabular data extraction and submission workflows via Python scripting.",
-        roleOrHighlight: "Automation Scripting",
-      },
+export const TECH_PROJECT_MAPPINGS: TechProjectMapping[] = [
+  {
+    tech: "Python",
+    category: "languages",
+    projectIds: [
+      "OceanGuard AI (SIH26143)",
+      "RAG Academic Assistant",
+      "Gender & Age Estimation AI",
     ],
   },
-  LangChain: {
-    skillName: "LangChain",
-    category: "Applied AI",
-    projects: [
-      {
-        title: "RAG Academic Assistant",
-        description: "Constructed retrieval chains, semantic document splitters, and contextual prompt synthesis guardrails.",
-        roleOrHighlight: "RAG Architecture",
-        link: "#projects",
-      },
+  {
+    tech: "LangChain & RAG",
+    category: "ai",
+    projectIds: ["RAG Academic Assistant"],
+  },
+  {
+    tech: "FAISS Vector DB",
+    category: "ai",
+    projectIds: ["RAG Academic Assistant"],
+  },
+  {
+    tech: "FastAPI",
+    category: "frameworks",
+    projectIds: ["OceanGuard AI (SIH26143)"],
+  },
+  {
+    tech: "OpenCV",
+    category: "ai",
+    projectIds: ["OceanGuard AI (SIH26143)", "Gender & Age Estimation AI"],
+  },
+  {
+    tech: "Node.js & Express",
+    category: "frameworks",
+    projectIds: [
+      "QuickServe — Local Services",
+      "Full-Stack Job Portal",
+      "AI-First Healthcare CRM",
+      "Hyperlocal Delivery Marketplace",
     ],
   },
-  "FAISS Vector DB": {
-    skillName: "FAISS Vector DB",
-    category: "Applied AI & Vector Search",
-    projects: [
-      {
-        title: "RAG Academic Assistant",
-        description: "Indexed dense mathematical embeddings for high-speed similarity search across institutional document archives.",
-        roleOrHighlight: "Vector Store Engineering",
-        link: "#projects",
-      },
+  {
+    tech: "PHP & Apache",
+    category: "languages",
+    projectIds: [
+      "TCET Specialization Tracker",
+      "Learning Management System",
+      "Smart Digital Library",
+      "Curfew E-Pass System",
+      "Online Security Guard System",
+      "Zoho Bulk Mailer",
     ],
   },
-  OpenCV: {
-    skillName: "OpenCV",
-    category: "Computer Vision",
-    projects: [
-      {
-        title: "OceanGuard AI",
-        description: "Applied adaptive thresholding and morphological filtering to isolate satellite SAR oil slick contours.",
-        roleOrHighlight: "Satellite Image Processing",
-        link: "#projects",
-      },
-      {
-        title: "Age & Gender Detection",
-        description: "Performed face detection, bounding box normalization, and video frame inference.",
-        roleOrHighlight: "Facial Analysis",
-      },
+  {
+    tech: "MySQL",
+    category: "databases",
+    projectIds: [
+      "TCET Specialization Tracker",
+      "OneConnect Super-App",
+      "Learning Management System",
+      "Smart Digital Library",
+      "Hyperlocal Delivery Marketplace",
+      "Curfew E-Pass System",
     ],
   },
-  "Pandas & NumPy": {
-    skillName: "Pandas & NumPy",
-    category: "Data Engineering",
-    projects: [
-      {
-        title: "OceanGuard AI",
-        description: "Handled multi-ship telemetry data frames (MMSI, lat/long, SOG, COG) and computed vectorized distance matrices.",
-        roleOrHighlight: "Telemetry Mathematics",
-        link: "#projects",
-      },
+  {
+    tech: "MongoDB",
+    category: "databases",
+    projectIds: [
+      "QuickServe — Local Services",
+      "Full-Stack Job Portal",
+      "AI-First Healthcare CRM",
     ],
   },
-  PHP: {
-    skillName: "PHP",
-    category: "Full-Stack Backend",
-    projects: [
-      {
-        title: "TCET Specialization Tracker",
-        description: "Designed core server logic, role-based session auth, and administrative allocation endpoints.",
-        roleOrHighlight: "Institutional Core",
-        link: "#projects",
-      },
-      {
-        title: "Learning Management System",
-        description: "Built course assignment and grading rubrics workflows with MySQL backend.",
-        roleOrHighlight: "Academic Portal",
-      },
-      {
-        title: "Zoho Bulk Mailer",
-        description: "Engineered CLI batch automation with SMTP socket handlers.",
-        roleOrHighlight: "CLI Automation",
-      },
-    ],
+  {
+    tech: "Flutter & Dart",
+    category: "mobile",
+    projectIds: ["QuizAI — Adaptive Learning App"],
   },
-  MySQL: {
-    skillName: "MySQL",
-    category: "Relational Databases",
-    projects: [
-      {
-        title: "TCET Specialization Tracker",
-        description: "Architected relational schema with foreign key constraints tracking 150+ students across tracks.",
-        roleOrHighlight: "Relational Modeling",
-        link: "#projects",
-      },
-      {
-        title: "Smart Digital Library Portal",
-        description: "Designed book cataloging, checkout logs, and automated fine calculation queries.",
-        roleOrHighlight: "Relational Storage",
-      },
-      {
-        title: "OneConnect Super-App",
-        description: "Managed relational tables for enterprise Java servlet dashboards.",
-        roleOrHighlight: "Enterprise DB",
-      },
-    ],
+  {
+    tech: "Java",
+    category: "languages",
+    projectIds: ["OneConnect Super-App"],
   },
-  "Node.js": {
-    skillName: "Node.js",
-    category: "Backend Architecture",
-    projects: [
-      {
-        title: "QuickServe Local Services",
-        description: "Built Express.js REST APIs with JWT authentication and geospatial querying.",
-        roleOrHighlight: "Backend Architecture",
-        link: "#projects",
-      },
-      {
-        title: "Job Portal System",
-        description: "Implemented recruiter and applicant routing middleware with MongoDB.",
-        roleOrHighlight: "RESTful Endpoints",
-      },
-      {
-        title: "Healthcare CRM (HCP Module)",
-        description: "Created interaction logging and compliance audit APIs.",
-        roleOrHighlight: "CRM Systems",
-      },
-    ],
+  {
+    tech: "Firebase Firestore",
+    category: "databases",
+    projectIds: ["QuizAI — Adaptive Learning App"],
   },
-  MongoDB: {
-    skillName: "MongoDB",
-    category: "NoSQL Databases",
-    projects: [
-      {
-        title: "QuickServe Local Services",
-        description: "Applied $nearSphere 2dsphere indexing for location radius discovery.",
-        roleOrHighlight: "Geospatial Indexing",
-        link: "#projects",
-      },
-      {
-        title: "Job Portal System",
-        description: "Document schema modeling for user profiles, resumes, and job applications.",
-        roleOrHighlight: "Document Modeling",
-      },
-    ],
+  {
+    tech: "C++",
+    category: "languages",
+    projectIds: ["PasteBoard Clipboard Utility"],
   },
-  Flutter: {
-    skillName: "Flutter",
-    category: "Mobile Engineering",
-    projects: [
-      {
-        title: "QuizAI Mobile App",
-        description: "Built modular widget trees, Provider state management, and Cloud Firestore synchronization.",
-        roleOrHighlight: "Cross-Platform Mobile",
-        link: "#projects",
-      },
-      {
-        title: "Creatalysis Mobile Delivery",
-        description: "Contributed to production application features and responsive mobile UI.",
-        roleOrHighlight: "Internship Delivery",
-      },
-    ],
-  },
-  Java: {
-    skillName: "Java",
-    category: "Core Languages",
-    projects: [
-      {
-        title: "OneConnect Super-App",
-        description: "Engineered Java Servlets, session filters, and MVC architecture.",
-        roleOrHighlight: "Enterprise Servlets",
-      },
-      {
-        title: "IP Assignment OOP Systems",
-        description: "Applied object-oriented design patterns, polymorphic models, and robust error handling.",
-        roleOrHighlight: "OOP Architecture",
-      },
-    ],
-  },
-  JavaScript: {
-    skillName: "JavaScript",
-    category: "Web & Systems",
-    projects: [
-      {
-        title: "TCET Specialization Tracker",
-        description: "Asynchronous AJAX form submissions and real-time DOM status updates.",
-        roleOrHighlight: "AJAX & DOM",
-        link: "#projects",
-      },
-      {
-        title: "QuickServe Platform",
-        description: "Client-side filtering, map interfaces, and asynchronous data fetching.",
-        roleOrHighlight: "Client Engineering",
-        link: "#projects",
-      },
-      {
-        title: "Maharashtra State Books Portal",
-        description: "Engineered dynamic textbook catalog search and filter interface.",
-        roleOrHighlight: "Vanilla JS UI",
-      },
-    ],
-  },
-  "Next.js / React": {
-    skillName: "Next.js / React",
-    category: "Frontend & Full-Stack",
-    projects: [
-      {
-        title: "Personal Portfolio (V2)",
-        description: "Engineered this human-first editorial portfolio with App Router, TypeScript, and Tailwind CSS.",
-        roleOrHighlight: "Next.js 15 App Router",
-        link: "#",
-      },
-      {
-        title: "Hyperlocal Delivery Marketplace",
-        description: "Built dynamic multi-vendor marketplace client interfaces with React.",
-        roleOrHighlight: "React UI",
-      },
-    ],
-  },
-};
+];
 
 export const SKILL_CATEGORIES: SkillCategory[] = [
   {

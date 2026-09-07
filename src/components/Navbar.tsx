@@ -2,11 +2,12 @@
 
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Menu, X, FileDown, ArrowUpRight } from "lucide-react";
+import { Menu, X, FileDown } from "lucide-react";
 import { PERSONAL_INFO } from "@/lib/data";
 
 const navLinks = [
   { name: "Projects", href: "#projects" },
+  { name: "Mapping", href: "#mapping" },
   { name: "About", href: "#about" },
   { name: "Research", href: "#research" },
   { name: "Experience", href: "#experience" },
@@ -50,7 +51,7 @@ export default function Navbar() {
           </a>
 
           {/* Desktop Navigation Links */}
-          <div className="hidden md:flex items-center gap-7">
+          <div className="hidden md:flex items-center gap-6">
             {navLinks.map((link) => (
               <a
                 key={link.name}
